@@ -151,7 +151,7 @@ htmlhelp_basename = 'progra-utfsm-2010-1'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'ProgramacionTest.tex', u'Programación Test Documentation',
+  ('index', 'ProgramacionTest.tex', u'Programación 1er semestre 2010',
    u'Roberto Bonvallet', 'manual'),
 ]
 
