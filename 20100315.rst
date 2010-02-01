@@ -1,0 +1,33 @@
+=================
+Clase 15 de marzo
+=================
+
+Resumen de clases
+-----------------
+Aprendimos lo que era un algoritmo.
+
+Un programita en Pascalito::
+
+    program Primos:
+    var
+        n, d: Integer;
+        isPrime: Boolean;
+    begin
+        Read(n);
+
+        isPrime := true;
+        for d = 2 to n - 1 do
+        begin
+            if n mod d = 0 then
+                isPrime := false;
+        end;
+    end.
+
+.. note::
+
+    Recuerden que hay quiz la próxima clase.
+
+.. warning::
+
+    Advertencia de prueba
+
