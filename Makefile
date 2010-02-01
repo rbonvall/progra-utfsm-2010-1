@@ -87,5 +87,5 @@ doctest:
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in _build/doctest/output.txt."
 
-deploy:
+deploy: html
 	scp -r _build/html/ rbonvall@ssh2.inf.utfsm.cl:html/progra-utfsm-2010-1
