@@ -24,35 +24,16 @@ import sys, os
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ['sphinx.ext.pngmath']
 
-# Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
-# The suffix of source filenames.
 source_suffix = '.rst'
+master_doc = 'index' # The master toctree document.
 
-# The master toctree document.
-master_doc = 'index'
-
-# General information about the project.
-project = u'Programación Test'
+project = u'Programación 1-2010'
 copyright = u'2010, Roberto Bonvallet'
-
-# The version info for the project you're documenting, acts as replacement for
-# |version| and |release|, also used in various other places throughout the
-# built documents.
-#
-# The short X.Y version.
-version = '2010.1'
-# The full version, including alpha/beta/rc tags.
-release = '2010.1'
-
+version = '2010.1' # The short X.Y version.
+release = '2010.1' # The full version, including alpha/beta/rc tags.
 language = 'es'
-
-# There are two options for replacing |today|: either, you set today to some
-# non-false value, then it is used:
-#today = ''
-# Else, today_fmt is used as the format for a strftime call.
-#today_fmt = '%B %d, %Y'
 
 # List of documents that shouldn't be included in the build.
 #unused_docs = []
@@ -61,8 +42,7 @@ language = 'es'
 # for source files.
 exclude_trees = ['_build']
 
-# The reST default role (used for this markup: `text`) to use for all documents.
-#default_role = None
+#default_role = None  # for `text`
 
 # If true, '()' will be appended to :func: etc. cross-reference text.
 #add_function_parentheses = True
@@ -80,12 +60,8 @@ html_theme_options = {
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
 
-# The name for this set of Sphinx documents.  If None, it defaults to
-# "<project> v<release> documentation".
-#html_title = None
-
-# A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = None
+html_title = u'Programación, 1er semestre de 2010'
+html_short_title = u'Programación 1-2010'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
