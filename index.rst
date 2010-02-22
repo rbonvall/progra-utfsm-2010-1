@@ -11,8 +11,8 @@ Programación, 1er semestre de 2010
 :Clases:  Lunes 1-2, Miércoles 1-2
 :Ayudantía: *Por definir*
 
-:Página oficial del ramo: http://programacion.inf.utfsm.cl
-:Página de este paralelo: http://www.inf.utfsm.cl/~rbonvall/progra-utfsm-2010-1
+:Página del ramo: http://programacion.inf.utfsm.cl
+:Página del paralelo: http://www.inf.utfsm.cl/~rbonvall/progra-utfsm-2010-1
 
 
 Contenidos del ramo
@@ -22,4 +22,25 @@ Contenidos del ramo
    :maxdepth: 1
 
    20100315
+   materia
+
+
+Evaluación del ramo
+-------------------
+
+La nota final del ramo se calcula...
+
+* Promedio de certámenes (x%)
+* Nota de laboratorio (y%)
+* Controles periódicos en clases (z%)
+* Proyecto (w%)
+
+
+Calendario
+----------
+(poner calendario)
+
+Comentarios
+-----------
+(poner comentarios)
 
