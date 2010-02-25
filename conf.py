@@ -31,8 +31,8 @@ master_doc = 'index' # The master toctree document.
 
 project = u'Programación 1-2010'
 copyright = u'2010, Roberto Bonvallet'
-version = '2010.1' # The short X.Y version.
-release = '2010.1' # The full version, including alpha/beta/rc tags.
+version = '' # The short X.Y version.
+release = '' # The full version, including alpha/beta/rc tags.
 language = 'es'
 
 # List of documents that shouldn't be included in the build.
@@ -118,35 +118,29 @@ htmlhelp_basename = 'progra-utfsm-2010-1'
 
 # -- Options for LaTeX output --------------------------------------------------
 
-# The paper size ('letter' or 'a4').
-#latex_paper_size = 'letter'
-
-# The font size ('10pt', '11pt' or '12pt').
+latex_paper_size = 'letter'
 #latex_font_size = '10pt'
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'ProgramacionTest.tex', u'Programación 1er semestre 2010',
+  ('index', 'progra.tex', u'Programación 1er semestre 2010',
    u'Roberto Bonvallet', 'manual'),
 ]
 
-# The name of an image file (relative to this directory) to place at the top of
-# the title page.
+latex_elements = {
+    'fontpkg': '\\usepackage{mathpazo}',
+    'pointsize': '12pt',
+    #'preamble': '\\usepackage[spanish]{babel} \selectlanguage{spanish}',
+}
+
 #latex_logo = None
-
-# For "manual" documents, if this is true, then toplevel headings are parts,
-# not chapters.
-#latex_use_parts = False
-
-# Additional stuff for the LaTeX preamble.
+#latex_use_parts = False   # parts instead of chapters in manual
 #latex_preamble = ''
-
-# Documents to append as an appendix to all manuals.
-#latex_appendices = []
+#latex_appendices = []   # docs to append as appendix to all manuals
 
 # If false, no module index is generated.
-#latex_use_modindex = True
+latex_use_modindex = False
 
 highlight_language = 'pascal'
 
