@@ -22,7 +22,10 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.pngmath']
+extensions = [
+    #'sphinx.ext.pngmath',
+    'sphinx.ext.jsmath',
+]
 
 templates_path = ['_templates']
 
@@ -56,34 +59,22 @@ html_theme = 'sphinxdoc'
 html_theme_options = {
     'nosidebar': True,
 }
+html_title = u'Programación, 1er semestre de 2010'
+html_short_title = u'Programación 1-2010'
+#html_logo = None
+#html_favicon = None
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
 
-html_title = u'Programación, 1er semestre de 2010'
-html_short_title = u'Programación 1-2010'
-
-# The name of an image file (relative to this directory) to place at the top
-# of the sidebar.
-#html_logo = None
-
-# The name of an image file (within the static path) to use as favicon of the
-# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
-# pixels large.
-#html_favicon = None
-
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-#html_static_path = ['_static']
+html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
 #html_last_updated_fmt = '%b %d, %Y'
-
-# If true, SmartyPants will be used to convert quotes and dashes to
-# typographically correct entities.
-#html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
@@ -93,7 +84,7 @@ html_short_title = u'Programación 1-2010'
 #html_additional_pages = {}
 
 # If false, no module index is generated.
-#html_use_modindex = True
+html_use_modindex = False
 
 # If false, no index is generated.
 #html_use_index = True
@@ -109,12 +100,8 @@ html_short_title = u'Programación 1-2010'
 # base URL from which the finished HTML is served.
 #html_use_opensearch = ''
 
-# If nonempty, this is the file name suffix for HTML files (e.g. ".xhtml").
-#html_file_suffix = ''
-
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'progra-utfsm-2010-1'
-
 
 # -- Options for LaTeX output --------------------------------------------------
 
@@ -143,4 +130,6 @@ latex_elements = {
 latex_use_modindex = False
 
 highlight_language = 'pascal'
+
+jsmath_path = 'jsMath/easy/load.js'
 
