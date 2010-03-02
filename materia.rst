@@ -55,14 +55,41 @@ puede ser: ¿podría un robot seguir estas instrucciones sin equivocarse?
 Un ejemplo sencillo: resolver una ecuación de segundo grado
 -----------------------------------------------------------
 Una ecuación de segundo grado
-es una ecuación de la forma :math:`ax^2 + bx + c = 0`,
+es una ecuación de la forma
+:math:`ax^2 + bx + c = 0`,
 donde :math:`a`, :math:`b` y :math:`c` son datos dados
 y :math:`x` es la incógnita que se desea determinar.
 
 Por ejemplo, :math:`2x^2 - 5x + 2 = 0` es una ecuación de segundo grado
 con :math:`a = 2`, :math:`b = -5` y :math:`c = 2`.
-Sus soluciones son :math:`x_1 = 0,5` y :math:`x_2 = 2`,
+Sus soluciones son :math:`x_1 = 1/2` y :math:`x_2 = 2`,
 como se puede comprobar reemplazando estos valores en la ecuación.
+
+En álgebra aprendemos un algoritmo para resolver estas ecuaciones.
+Es lo suficientemente detallado para que pueda usarlo cualquier persona,
+incluso sin saber qué es una ecuación de segundo grado.
+
+1. **Entrada**: obtener los valores de
+   :math:`a`, :math:`b` y :math:`c`.
+2. Calcular el discriminante :math:`Δ = b^2 - 4ac`.
+3. Si :math:`Δ < 0`, entonces
+
+   * la ecuación no tiene soluciones reales.
+
+4. Si :math:`Δ = 0`, entonces
+
+   * la ecuación tiene una solución real,
+     que es :math:`x = -b/2a`.
+
+5. Si :math:`Δ > 0`, entonces
+
+   * la ecuación tiene dos soluciones reales,
+     que son :math:`x = (-b ± \sqrt{Δ})/2a`.
+
+6. **Salida**: entregar las soluciones :math:`x` obtenidas.
+
+La entrada es el paso 1, la salida es el paso 6,
+y el resto de los pasos son parte del proceso.
 
 
 Cómo describir un algoritmo
@@ -72,15 +99,32 @@ no es el más apropiado para describir un algoritmo:
 es complejo, ambiguo e impreciso.
 
 Un algoritmo debe ser descrito en un lenguaje simbólico universal.
-Dos lenguajes que usaremos son los **diagramas de flujo**
-y el **pseudocódigo**.
+Dos lenguajes que usaremos son
+los diagramas de flujo y el pseudocódigo.
 
 Diagramas de flujo
 ~~~~~~~~~~~~~~~~~~
+Un **diagrama de flujo** es una representación gráfica de un algoritmo.
+Los pasos son representados por varios tipos de cajas,
+y el flujo de ejecución es representado por flechas que conectan las cajas.
+
+El algoritmo para resolver ecuaciones de segundo grado
+puede ser representado así:
+
+
+
+
 
 Pseudocódigo
 ~~~~~~~~~~~~
+El **pseudocódigo** es una representación
+en que los pasos del algoritmo son descritos de manera estructurada
+usando ciertas convenciones.
+Es una mezcla de lenguaje natural con lenguaje de programación.
 
 
 
+La gracia del pseudocódigo es que es lo más parecido
+al código que uno realmente escribe para desarrollar un programa
+en el computador, y que aprenderemos más adelante.
 
