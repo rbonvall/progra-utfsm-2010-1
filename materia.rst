@@ -72,20 +72,12 @@ incluso sin saber qué es una ecuación de segundo grado.
 1. **Entrada**: obtener los valores de
    :math:`a`, :math:`b` y :math:`c`.
 2. Calcular el discriminante :math:`Δ = b^2 - 4ac`.
-3. Si :math:`Δ < 0`, entonces
-
-   * la ecuación no tiene soluciones reales.
-
-4. Si :math:`Δ = 0`, entonces
-
-   * la ecuación tiene una solución real,
-     que es :math:`x = -b/2a`.
-
+3. Si :math:`Δ < 0`, entonces la ecuación no tiene soluciones reales.
+4. Si :math:`Δ = 0`, entonces la ecuación tiene una solución real,
+   que es :math:`x = -b/2a`.
 5. Si :math:`Δ > 0`, entonces
-
-   * la ecuación tiene dos soluciones reales,
-     que son :math:`x = (-b ± \sqrt{Δ})/2a`.
-
+   la ecuación tiene dos soluciones reales,
+   que son :math:`x = (-b ± \sqrt{Δ})/2a`.
 6. **Salida**: entregar las soluciones :math:`x` obtenidas.
 
 La entrada es el paso 1, la salida es el paso 6,
@@ -111,8 +103,22 @@ y el flujo de ejecución es representado por flechas que conectan las cajas.
 El algoritmo para resolver ecuaciones de segundo grado
 puede ser representado así:
 
+.. image:: _static/images/flujo-ec-2do-grado.png
+   :alt: (Diagrama de flujo)
 
+* El inicio y el final del algoritmo son representados con círculos.
+  El algoritmo siempre debe llegar desde uno hasta el otro,
+  sin importar por qué camino lo hace.
+  Un algoritmo no puede «quedarse pegado».
 
+* La entrada y la salida de datos son representadas con romboides,
+  que en el ejemplo están pintados de verde.
+  La entrada de un dato es representada con el texto `Leer(dato)`,
+  y la salida de información con el texto `Escribir(mensaje)`.
+
+* Las partes donde un algoritmo puede tomar varios caminos
+  son representadas con diamantes.
+  Tiene que haber un camino saliente para cada caso posible.
 
 
 Pseudocódigo
@@ -122,9 +128,35 @@ en que los pasos del algoritmo son descritos de manera estructurada
 usando ciertas convenciones.
 Es una mezcla de lenguaje natural con lenguaje de programación.
 
+El pseudocódigo...::
+
+    algoritmo EcuacionSegundoGrado;
+    inicio
+        Leer(a);
+        Leer(b);
+        Leer(c);
+
+        Δ := b² − 4ac;
+
+        si Δ < 0 entonces
+            Escribir("No hay soluciones reales");
+
+        si Δ = 0 entonces
+        inicio
+            x₁ := −b / (2a);
+            Escribir("La única solucion es ", x₁);
+        fin
+
+        si Δ > 0 entonces
+        inicio
+            x₁ := (−b + Raíz(Δ)) / (2a);
+            x₂ := (−b − Raíz(Δ)) / (2a);
+            Escribir("La primera solucion es ", x₁);
+            Escribir("La segunda solucion es ", x₂);
+        fin
+    fin.
 
 
 La gracia del pseudocódigo es que es lo más parecido
 al código que uno realmente escribe para desarrollar un programa
 en el computador, y que aprenderemos más adelante.
-
