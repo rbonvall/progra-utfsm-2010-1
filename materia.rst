@@ -10,7 +10,7 @@ Todo algoritmo tiene un inicio y un final.
 Los pasos deben estar muy bien definidos,
 y tienen que describir sin ambigüedades
 cómo llegar desde el inicio hasta el final.
-Un algoritmo tiene tres componentes que siempre están presentes:
+Las partes de un algoritmo tiene tres componentes que siempre están presentes:
 
 1. la **entrada**: son los datos que necesita un algoritmo
    para poder ser ejecutado;
@@ -83,6 +83,11 @@ incluso sin saber qué es una ecuación de segundo grado.
 La entrada es el paso 1, la salida es el paso 6,
 y el resto de los pasos son parte del proceso.
 
+Elementos de un algoritmo
+-------------------------
+* Asignaciones.
+* Condicionales.
+* Ciclos.
 
 Cómo describir un algoritmo
 ---------------------------
@@ -100,16 +105,16 @@ Un **diagrama de flujo** es una representación gráfica de un algoritmo.
 Los pasos son representados por varios tipos de cajas,
 y el flujo de ejecución es representado por flechas que conectan las cajas.
 
-El algoritmo para resolver ecuaciones de segundo grado
+Nuestro algoritmo de ejemplo
 puede ser representado así:
 
 .. image:: _static/images/flujo-ec-2do-grado.png
    :alt: (Diagrama de flujo)
 
 * El inicio y el final del algoritmo son representados con círculos.
-  El algoritmo siempre debe llegar desde uno hasta el otro,
+  El algoritmo siempre debe ser capaz llegar desde uno hasta el otro,
   sin importar por qué camino lo hace.
-  Un algoritmo no puede «quedarse pegado».
+  Un algoritmo no puede «quedarse pegado» en la mitad.
 
 * La entrada y la salida de datos son representadas con romboides,
   que en el ejemplo están pintados de verde.
@@ -157,6 +162,7 @@ El pseudocódigo...::
     fin.
 
 
-La gracia del pseudocódigo es que es lo más parecido
+La ventaja del pseudocódigo es que es lo más parecido
 al código que uno realmente escribe para desarrollar un programa
 en el computador, y que aprenderemos más adelante.
+
