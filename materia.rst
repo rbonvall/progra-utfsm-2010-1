@@ -89,7 +89,8 @@ y el resto de los pasos son parte del proceso.
 Elementos de un algoritmo
 -------------------------
 
-* **Expresiones**. Una expresión es una combinación de valores y operaciones
+**Expresiones**
+  Una **expresión** es una combinación de valores y operaciones
   que son evaluados durante la ejecución del algoritmo
   para obtener un valor.
   Por ejemplo, :math:`2 + 3` es una expresión
@@ -101,54 +102,55 @@ Elementos de un algoritmo
   al momento de la evaluación.
 
   Las diferentes partes de una expresión
-  también son expresiones por sí mismas.
-  En el ejemplo, :math:`b^2`, :math:`b`, :math:`4ac`, etc.
+  también son expresiones por sí solas.
+  En el ejemplo, :math:`b^2`, :math:`b` y :math:`4ac`
   son expresiones.
 
-* **Asignaciones**. Cuando un algoritmo calcula valores,
+**Asignaciones**
+  Cuando un algoritmo calcula valores,
   se necesita ponerles un nombre para poder referirse a ellos
   en pasos posteriores.
   Es lo que hacemos en el paso 2 de nuestro algoritmo,
   cuando calculamos el discriminante y lo llamamos :math:`Δ`.
-  Esto se llama una *asignación*,
+  Esto se llama una **asignación**,
   y se representa así: ``nombre := expresión``.
-  Al nombre utilizado se le dice *variable*.
+  Al nombre utilizado se le dice **variable**.
 
   La asignación del ejemplo sería::
 
     Δ := b² − 4ac;
 
-* **Condicionales**.
+**Condicionales**
   A veces un algoritmo debe realizar pasos diferentes
   bajo condiciones distintas.
   Es lo que hacemos en el paso 3 del ejemplo:
   decidimos que la ecuación no tiene soluciones
   solamente cuando se cumple que :math:`Δ < 0`.
-  Esto se llama un *condicional*.
+  Esto se llama un **condicional**.
 
   La condición que determina qué ejecutar
   es una expresión, cuyo valor debe ser
   verdadero o falso.
 
-* **Ciclos**.
-  Un *ciclo* ocurre cuando
+**Ciclos**
+  Un **ciclo** ocurre cuando
   un algoritmo ejecuta los mismos pasos varias veces.
   El ejemplo no tiene ciclos.
 
-* **Entrada**.
+**Entrada**
   Cuando un algoritmo necesita recibir un dato,
   se representa así: ``Leer(variable)``.
   Durante la ejecución, significa que el dato
   queda guardado en la variable.
 
   En el ejemplo, la entrada ocurre en el paso 1,
-  y debe ser representada así::
+  y puede ser representada así::
 
     Leer(a);
     Leer(b);
     Leer(c);
 
-* **Salida**.
+**Salida**
   Una vez que el algoritmo ha resuelto el problema
   para el que fue diseñado,
   debe entregar sus resultados como un mensaje.
@@ -161,7 +163,7 @@ Elementos de un algoritmo
     Escribir('No hay soluciones');
 
   Cuando existe una única solución,
-  se puede incluir la solución en el mensaje::
+  se puede incluirla en el mensaje::
 
     Escribir('La solución única es', x);
 
@@ -214,7 +216,7 @@ en que los pasos del algoritmo son descritos de manera estructurada
 usando ciertas convenciones.
 Es una mezcla de lenguaje natural con lenguaje de programación.
 
-El pseudocódigo...::
+Nuestro ejemplo quedaría representado así::
 
     algoritmo EcuaciónSegundoGrado;
     inicio
@@ -225,23 +227,43 @@ El pseudocódigo...::
         Δ := b² − 4ac;
 
         si Δ < 0 entonces
-            Escribir("No hay soluciones reales");
+            Escribir('No hay soluciones reales');
 
         si Δ = 0 entonces
         inicio
             x₁ := −b / (2a);
-            Escribir("La única solucion es ", x₁);
+            Escribir('La única solucion es ', x₁);
         fin
 
         si Δ > 0 entonces
         inicio
             x₁ := (−b + Raíz(Δ)) / (2a);
             x₂ := (−b − Raíz(Δ)) / (2a);
-            Escribir("La primera solucion es ", x₁);
-            Escribir("La segunda solucion es ", x₂);
+            Escribir('La primera solucion es ', x₁);
+            Escribir('La segunda solucion es ', x₂);
         fin
     fin.
 
+En el pseudocódigo de ejemplo podemos notar algunas de las convenciones.
+
+* Cada instrucción es escrita en una línea,
+  y terminada con un punto y coma.
+
+* El algoritmo se lee de arriba a abajo,
+  en el orden en que están escritas las instrucciones.
+
+* Los condicionales se escriben con el formato
+  ``si condición entonces instrucciones``.
+
+* Si dentro de un condicional se ejecuta más de una instrucción,
+  se marca explícitamente el inicio y el fin de las instrucciones.
+
+* Las instrucciones dentro de un condicional
+  son antecedidas con espacio en blanco.
+  Esto se llama **indentación**,
+  y es crucial para hacer el pseudocódigo más fácil de entender.
+
+* Los mensajes son escritos entre comillas simples: ``'mensaje'``.
 
 La ventaja del pseudocódigo es que es lo más parecido
 al código que uno realmente escribe para desarrollar un programa
