@@ -12,7 +12,7 @@ Programación, 1er semestre de 2010
 :Ayudantía: *Por definir*
 
 :Página del ramo: http://programacion.inf.utfsm.cl
-:Página del paralelo: http://www.inf.utfsm.cl/~rbonvall/progra-utfsm-2010-1
+:Página del paralelo: http://csrg.inf.utfsm.cl/~rbonvall/progra-utfsm-2010-1
 
 
 Contenidos del ramo
