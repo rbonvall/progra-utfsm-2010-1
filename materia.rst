@@ -55,22 +55,24 @@ sin necesidad de usar inteligencia, intuición ni habilidad.
 Un criterio para saber si un algoritmo está bien descrito
 puede ser: ¿podría un robot seguir estas instrucciones sin equivocarse?
 
-Un ejemplo sencillo: resolver una ecuación de segundo grado
------------------------------------------------------------
-Una ecuación de segundo grado
+Un ejemplo sencillo: resolver una ecuación cuadrática
+-----------------------------------------------------
+Una `ecuación cuadrática`_
 es una ecuación de la forma
 :math:`ax^2 + bx + c = 0`,
 donde :math:`a`, :math:`b` y :math:`c` son datos dados
 y :math:`x` es la incógnita que se desea determinar.
 
-Por ejemplo, :math:`2x^2 - 5x + 2 = 0` es una ecuación de segundo grado
+.. _ecuación cuadrática: http://es.wikipedia.org/wiki/Ecuaci%C3%B3n_de_segundo_grado
+
+Por ejemplo, :math:`2x^2 - 5x + 2 = 0` es una ecuación cuadrática
 con :math:`a = 2`, :math:`b = -5` y :math:`c = 2`.
 Sus soluciones son :math:`x_1 = 1/2` y :math:`x_2 = 2`,
 como se puede comprobar reemplazando estos valores en la ecuación.
 
 En álgebra aprendemos un algoritmo para resolver estas ecuaciones.
 Es lo suficientemente detallado para que pueda usarlo cualquier persona,
-incluso sin saber qué es una ecuación de segundo grado.
+incluso sin saber qué es una ecuación cuadrática.
 
 1. Obtener los valores de
    :math:`a`, :math:`b` y :math:`c`.
