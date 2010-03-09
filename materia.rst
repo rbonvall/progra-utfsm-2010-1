@@ -10,6 +10,9 @@ Todo algoritmo tiene un inicio y un final.
 Los pasos deben estar muy bien definidos,
 y tienen que describir sin ambigüedades
 cómo llegar desde el inicio hasta el final.
+
+El seguir los pasos de un algoritmo se denomina **ejecutar** el algoritmo.
+
 Las partes de un algoritmo tiene tres componentes que siempre están presentes:
 
 1. la **entrada**: son los datos que necesita un algoritmo
@@ -35,7 +38,7 @@ incluso sin darse cuenta:
 * El método para multiplicar números a mano
   que se aprende en el colegio es un algoritmo.
   Dado cualquier par de números enteros,
-  si seguimos paso a paso el procedimiento 
+  si seguimos paso a paso el procedimiento
   siempre obtendremos el producto.
 
   La entrada del algoritmo de multiplicación
@@ -69,25 +72,99 @@ En álgebra aprendemos un algoritmo para resolver estas ecuaciones.
 Es lo suficientemente detallado para que pueda usarlo cualquier persona,
 incluso sin saber qué es una ecuación de segundo grado.
 
-1. **Entrada**: obtener los valores de
+1. Obtener los valores de
    :math:`a`, :math:`b` y :math:`c`.
-2. Calcular el discriminante :math:`Δ = b^2 - 4ac`.
+2. Calcular el discriminante :math:`b^2 - 4ac`, y llamarlo :math:`Δ`.
 3. Si :math:`Δ < 0`, entonces la ecuación no tiene soluciones reales.
 4. Si :math:`Δ = 0`, entonces la ecuación tiene una solución real,
    que es :math:`x = -b/2a`.
 5. Si :math:`Δ > 0`, entonces
    la ecuación tiene dos soluciones reales,
    que son :math:`x = (-b ± \sqrt{Δ})/2a`.
-6. **Salida**: entregar las soluciones :math:`x` obtenidas.
+6. Entregar las soluciones :math:`x` obtenidas.
 
 La entrada es el paso 1, la salida es el paso 6,
 y el resto de los pasos son parte del proceso.
 
 Elementos de un algoritmo
 -------------------------
-* Asignaciones.
-* Condicionales.
-* Ciclos.
+
+* **Expresiones**. Una expresión es una combinación de valores y operaciones
+  que son evaluados durante la ejecución del algoritmo
+  para obtener un valor.
+  Por ejemplo, :math:`2 + 3` es una expresión
+  que, al ser evaluada, siempre entrega el valor :math:`5`.
+
+  En el ejemplo, :math:`b^2 - 4ac` es una expresión,
+  cuyo valor depende de qué valores tienen
+  :math:`a`, :math:`b` y :math:`c`
+  al momento de la evaluación.
+
+  Las diferentes partes de una expresión
+  también son expresiones por sí mismas.
+  En el ejemplo, :math:`b^2`, :math:`b`, :math:`4ac`, etc.
+  son expresiones.
+
+* **Asignaciones**. Cuando un algoritmo calcula valores,
+  se necesita ponerles un nombre para poder referirse a ellos
+  en pasos posteriores.
+  Es lo que hacemos en el paso 2 de nuestro algoritmo,
+  cuando calculamos el discriminante y lo llamamos :math:`Δ`.
+  Esto se llama una *asignación*,
+  y se representa así: ``nombre := expresión``.
+  Al nombre utilizado se le dice *variable*.
+
+  La asignación del ejemplo sería::
+
+    Δ := b² − 4ac;
+
+* **Condicionales**.
+  A veces un algoritmo debe realizar pasos diferentes
+  bajo condiciones distintas.
+  Es lo que hacemos en el paso 3 del ejemplo:
+  decidimos que la ecuación no tiene soluciones
+  solamente cuando se cumple que :math:`Δ < 0`.
+  Esto se llama un *condicional*.
+
+  La condición que determina qué ejecutar
+  es una expresión, cuyo valor debe ser
+  verdadero o falso.
+
+* **Ciclos**.
+  Un *ciclo* ocurre cuando
+  un algoritmo ejecuta los mismos pasos varias veces.
+  El ejemplo no tiene ciclos.
+
+* **Entrada**.
+  Cuando un algoritmo necesita recibir un dato,
+  se representa así: ``Leer(variable)``.
+  Durante la ejecución, significa que el dato
+  queda guardado en la variable.
+
+  En el ejemplo, la entrada ocurre en el paso 1,
+  y debe ser representada así::
+
+    Leer(a);
+    Leer(b);
+    Leer(c);
+
+* **Salida**.
+  Una vez que el algoritmo ha resuelto el problema
+  para el que fue diseñado,
+  debe entregar sus resultados como un mensaje.
+  La salida se representa así:
+  ``Escribir(mensaje)``.
+
+  En el ejemplo, cuando no existen soluciones,
+  la salida puede ser representada así::
+
+    Escribir('No hay soluciones');
+
+  Cuando existe una única solución,
+  se puede incluir la solución en el mensaje::
+
+    Escribir('La solución única es', x);
+
 
 Cómo describir un algoritmo
 ---------------------------
@@ -102,28 +179,32 @@ los diagramas de flujo y el pseudocódigo.
 Diagramas de flujo
 ~~~~~~~~~~~~~~~~~~
 Un **diagrama de flujo** es una representación gráfica de un algoritmo.
-Los pasos son representados por varios tipos de cajas,
-y el flujo de ejecución es representado por flechas que conectan las cajas.
+Los pasos son representados por varios tipos de bloques,
+y el flujo de ejecución es representado por flechas que conectan los bloques.
 
 Nuestro algoritmo de ejemplo
 puede ser representado así:
 
-.. image:: _static/images/flujo-ec-2do-grado.png
+.. image:: _static/imagenes/diagrama-flujo-ec-2do-grado.png
    :alt: (Diagrama de flujo)
 
-* El inicio y el final del algoritmo son representados con círculos.
+* El inicio y el final del algoritmo son representados con bloques circulares.
   El algoritmo siempre debe ser capaz llegar desde uno hasta el otro,
   sin importar por qué camino lo hace.
   Un algoritmo no puede «quedarse pegado» en la mitad.
 
 * La entrada y la salida de datos son representadas con romboides,
-  que en el ejemplo están pintados de verde.
-  La entrada de un dato es representada con el texto `Leer(dato)`,
-  y la salida de información con el texto `Escribir(mensaje)`.
+  que en la figura de arriba están pintados de verde.
 
-* Las partes donde un algoritmo puede tomar varios caminos
-  son representadas con diamantes.
+* Los condicionales son representadas con diamantes.
   Tiene que haber un camino saliente para cada caso posible.
+  La condición se pone dentro del diamante.
+
+* Los ciclos simplemente son flechas que regresan a bloques anteriores.
+
+* Otras instrucciones (como las asignaciones)
+  van dentro de rectángulos,
+  que en la figura están pintados de azul.
 
 
 Pseudocódigo
@@ -135,7 +216,7 @@ Es una mezcla de lenguaje natural con lenguaje de programación.
 
 El pseudocódigo...::
 
-    algoritmo EcuacionSegundoGrado;
+    algoritmo EcuaciónSegundoGrado;
     inicio
         Leer(a);
         Leer(b);
