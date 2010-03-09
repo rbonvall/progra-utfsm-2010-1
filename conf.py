@@ -63,6 +63,7 @@ html_title = u'Programación, 1er semestre de 2010'
 html_short_title = u'Programación 1-2010'
 #html_logo = None
 #html_favicon = None
+html_style = 'progra.css'
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
