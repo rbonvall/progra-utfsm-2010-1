@@ -11,7 +11,9 @@ PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d _build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
-.PHONY: help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
+DEPLOYDIR = ~/public_html/progra-utfsm-2010-1
+
+.PHONY: help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest deploy
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -88,4 +90,12 @@ doctest:
 	      "results in _build/doctest/output.txt."
 
 deploy: html
-	scp -r _build/html/ rbonvall@ssh2.inf.utfsm.cl:html/progra-utfsm-2010-1
+	@if [ $$(hostname | cut -d. -f2-) = csrg.inf.utfsm.cl ]; \
+	then \
+	    echo "Deploying to $(DEPLOYDIR)"; \
+	    echo rm -rf "$(DEPLOYDIR)"; \
+	    echo mv _build/html "$(DEPLOYDIR)"; \
+	else \
+	    echo "You must deploy from your csrg account"; \
+	fi
+
