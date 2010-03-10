@@ -11,7 +11,7 @@ PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d _build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
-DEPLOYDIR = ~/public_html/progra-utfsm-2010-1
+DEPLOYDIR = $(HOME)/public_html/progra-utfsm-2010-1
 
 .PHONY: help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest deploy
 
@@ -93,8 +93,8 @@ deploy: html
 	@if [ $$(hostname | cut -d. -f2-) = csrg.inf.utfsm.cl ]; \
 	then \
 	    echo "Deploying to $(DEPLOYDIR)"; \
-	    echo rm -rf "$(DEPLOYDIR)"; \
-	    echo mv _build/html "$(DEPLOYDIR)"; \
+	    rm -rf "$(DEPLOYDIR)"; \
+	    cp -R _build/html/ "$(DEPLOYDIR)"; \
 	else \
 	    echo "You must deploy from your csrg account"; \
 	fi
