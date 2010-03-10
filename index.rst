@@ -6,7 +6,7 @@
 Programación, 1er semestre de 2010
 ==================================
 
-:Profesor: Roberto Bonvallet <rbonvall@inf.utfsm.cl>
+:Profesor: Roberto Bonvallet <roberto.bonvallet@usm.cl>
 :Ayudante: *Por definir*
 :Clases:  Lunes 1-2, Miércoles 1-2
 :Ayudantía: *Por definir*
