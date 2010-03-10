@@ -273,3 +273,7 @@ La ventaja del pseudocódigo es que es lo más parecido
 al código que uno realmente escribe para desarrollar un programa
 en el computador, y que aprenderemos más adelante.
 
+Comentarios
+-----------
+.. include:: disqus.rst
+
