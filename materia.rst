@@ -4,6 +4,8 @@ Materia
 Algoritmos
 ----------
 
+.. index:: algoritmo, ejecución, entrada, proceso, salida
+
 Un **algoritmo** es una secuencia de pasos para resolver un problema.
 
 Todo algoritmo tiene un inicio y un final.
