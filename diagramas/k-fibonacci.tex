@@ -1,0 +1,53 @@
+\documentclass{minimal}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{mathpazo}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes,arrows}
+
+\newcommand{\assign}{\ensuremath{:=}}
+\newcommand{\var}[1]{\ensuremath{\text{\texttt{#1}}}}
+
+\begin{document}
+\pagestyle{empty}
+\input{flujo}
+
+\begin{tikzpicture}[node distance=13ex, auto]
+    % Place nodes
+    \node [node] (start) { inicio };
+    \node [io, below of=start] (read) { Leer($k$) };
+    \node [decision, below of=read] (is-zero) { ¿$k = 0$? };
+    \node [stmt, below of=is-zero] (zero) {
+        $\var{actual}\assign 0$; \\
+    };
+    \node [stmt, right of=zero, text width=10em, node distance=12em] (init) {
+        $\var{actual}\assign 1$; \\
+        $\var{anterior}\assign 0$;
+        $\var{cuenta}\assign 1$; \\
+    };
+    \node [decision, below of=init] (is-kth) {
+        ¿$\var{cuenta} < k$?
+    };
+    \node [stmt, below of=is-kth, text width=15em, node distance=15ex] (update) {
+        $\var{suma}\assign \var{actual} + \var{anterior}$; \\
+        $\var{anterior}\assign \var{actual}$; \\
+        $\var{actual}\assign \var{suma}$; \\
+        $\var{cuenta}\assign \var{cuenta} + 1$;
+    };
+    \node [io, below of=zero, node distance=40ex] (write-kth) { Escribir($\var{actual}$) };
+    \node [node, below of=write-kth] (end) { fin };
+
+    \path [conn] (start) -- (read);
+    \path [conn] (read) -- (is-zero);
+    \path [conn] (is-zero) -| node[very near start] {no} (init);
+    \path [conn] (is-zero) -- node[near start] {sí} (zero);
+    \path [conn] (init) -- (is-kth);
+    \path [conn] (update.east) -- +(1, 0) |- (is-kth.east);
+    \path [conn] (zero) -- (write-kth);
+    \path [conn] (is-kth)      -- node[near start] {no} (update);
+    \path [conn] (is-kth.west) -| node[very near start] {sí} (write-kth.north);
+    \path [conn] (write-kth)  -- (end);
+\end{tikzpicture}
+
+\end{document}
