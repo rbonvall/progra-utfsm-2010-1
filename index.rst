@@ -21,26 +21,12 @@ Contenidos del ramo
 .. toctree::
    :maxdepth: 1
 
-   20100315
-   materia
-
-
-Evaluación del ramo
--------------------
-
-La nota final del ramo se calcula...
-
-* Promedio de certámenes (x%)
-* Nota de laboratorio (y%)
-* Controles periódicos en clases (z%)
-* Proyecto (w%)
-
+   algoritmos
+   elementos
+   diagramas-de-flujo
+   pseudocodigo
 
 Calendario
 ----------
 (poner calendario)
-
-Comentarios
------------
-(poner comentarios)
 
