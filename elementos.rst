@@ -22,6 +22,14 @@ también son expresiones por sí solas.
 En el ejemplo, :math:`b^2`, :math:`b` y :math:`4ac`
 son expresiones.
 
+Al representar las expresiones,
+marcaremos explicitamente las multiplicaciones::
+
+    b² − 4 × a × c
+
+Así evitaremos confundir los valores ``a`` y ``c``
+con un único valor llamado ``ac``.
+
 Asignaciones
 ------------
 
@@ -33,17 +41,39 @@ en pasos posteriores.
 Es lo que hacemos en el paso 2 de nuestro algoritmo,
 cuando calculamos el discriminante y lo llamamos :math:`Δ`.
 Esto se llama una **asignación**,
-y se representa así: ``nombre := expresión``.
-Al nombre utilizado se le dice **variable**.
+y al nombre utilizado se le dice **variable**.
+
+Una asignación se representa así::
+
+    variable := expresión
 
 La asignación del ejemplo sería::
 
-    Δ := b² − 4ac;
+    Δ := b² − 4 × a × c
+
+Una asignación debe interpretarse así:
+
+1. primero la expresión a la derecha del ``:=`` es evaluada,
+   utilizando los valores que tienen las variables en ese momento;
+2. una vez obtenido el resultado,
+   el valor de la variable a la izquierda del ``:=``
+   es reemplazado por ese resultado.
+
+Bajo esta interpretación,
+es perfectamente posible una asignación como ésta::
+
+    i := i + 1
+
+Primero la expresión es evaluada,
+y su resultado es el sucesor del valor actual de ``i``.
+Por ejemplo, si ``i`` tiene el valor 15,
+después de la asignación tendrá el valor 16.
+Esto *no* significa que 15 = 16.
 
 Condicionales
 -------------
 
-.. index:: condicional
+.. index:: condicional, sí-entonces, sí-entonces-si-no
 
 A veces un algoritmo debe realizar pasos diferentes
 bajo condiciones distintas.
@@ -59,10 +89,16 @@ verdadero o falso.
 Ciclos
 ------
 
-.. index:: ciclo
+.. index:: ciclo, condición de término
 
 Un **ciclo** ocurre cuando
-un algoritmo ejecuta los mismos pasos varias veces.
+un algoritmo ejecuta una serie de instrucciones
+varias veces.
+
+Como un algoritmo no puede quedarse pegado,
+un ciclo debe tener además una condición de término,
+cuyo valor indica si el ciclo debe continuar o terminar.
+
 El ejemplo no tiene ciclos.
 
 Entrada
@@ -71,16 +107,19 @@ Entrada
 .. index:: entrada, lectura
 
 Cuando un algoritmo necesita recibir un dato,
-se representa así: ``Leer(variable)``.
+se representa así::
+
+    Leer(variable)
+
 Durante la ejecución, significa que el dato
 queda guardado en la variable.
 
 En el ejemplo, la entrada ocurre en el paso 1,
 y puede ser representada así::
 
-    Leer(a);
-    Leer(b);
-    Leer(c);
+    Leer(a)
+    Leer(b)
+    Leer(c)
 
 Salida
 ------
@@ -90,18 +129,24 @@ Salida
 Una vez que el algoritmo ha resuelto el problema
 para el que fue diseñado,
 debe entregar sus resultados como un mensaje.
-La salida se representa así:
-``Escribir(mensaje)``.
+La salida se representa así::
+
+    Escribir(mensaje)
+
+Si el mensaje es un texto literal,
+va entre comillas simples.
+Si es una variable,
+va sólo el nombre de la variable.
 
 En el ejemplo, cuando no existen soluciones,
 la salida puede ser representada así::
 
-    Escribir('No hay soluciones');
+    Escribir('No hay soluciones')
 
 Cuando existe una única solución,
 se puede incluirla en el mensaje::
 
-    Escribir('La solución única es', x);
+    Escribir('La solución única es', x)
 
 Comentarios
 -----------
