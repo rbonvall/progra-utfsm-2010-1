@@ -1,2 +1,5 @@
 *.swp
 _build/
+diagramas/*.aux
+diagramas/*.log
+diagramas/*.pdf
