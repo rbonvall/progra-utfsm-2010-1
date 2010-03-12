@@ -39,7 +39,7 @@ release = '' # The full version, including alpha/beta/rc tags.
 language = 'es'
 
 # List of documents that shouldn't be included in the build.
-#unused_docs = []
+unused_docs = ['disqus']
 
 # List of directories, relative to source directory, that shouldn't be searched
 # for source files.
