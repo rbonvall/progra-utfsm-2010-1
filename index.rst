@@ -28,5 +28,5 @@ Contenidos del ramo
 
 Calendario
 ----------
-(poner calendario)
+.. include:: calendario.rst
 
