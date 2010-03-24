@@ -23,9 +23,6 @@ Un algoritmo tiene tres componentes que siempre están presentes:
    utilizando la entrada;
 3. la **salida**: es el resultado que entrega el algoritmo.
 
-El proceso describe cómo la entrada es transformada
-en la salida.
-
 .. index:: problema computacional
 
 Los algoritmos son una herramienta para resolver
@@ -33,6 +30,8 @@ Los algoritmos son una herramienta para resolver
 La definición de un problema computacional
 especifica en términos generales
 la relación deseada entre la entrada y la salida
+El algoritmo especifica
+cómo la entrada se transforma en la salida.
 
 Todo el mundo conoce y utiliza algoritmos a diario,
 incluso sin darse cuenta:
