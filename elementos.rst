@@ -23,9 +23,10 @@ En el ejemplo, :math:`b^2`, :math:`b` y :math:`4ac`
 son expresiones.
 
 Al representar las expresiones,
-marcaremos explicitamente las multiplicaciones::
+representaremos las multiplicaciones explicitamente
+con un asterisco::
 
-    b² − 4 × a × c
+    b² − 4 * a * c
 
 Así evitaremos confundir los valores ``a`` y ``c``
 con un único valor llamado ``ac``.
@@ -109,17 +110,19 @@ Entrada
 Cuando un algoritmo necesita recibir un dato,
 se representa así::
 
-    Leer(variable)
+    Read(variable)
 
-Durante la ejecución, significa que el dato
+(*read* significa «leer» en inglés).
+Durante la ejecución,
+esto significa que el dato
 queda guardado en la variable.
 
 En el ejemplo, la entrada ocurre en el paso 1,
 y puede ser representada así::
 
-    Leer(a)
-    Leer(b)
-    Leer(c)
+    Read(a)
+    Read(b)
+    Read(c)
 
 Salida
 ------
@@ -131,8 +134,9 @@ para el que fue diseñado,
 debe entregar sus resultados como un mensaje.
 La salida se representa así::
 
-    Escribir(mensaje)
+    Write(mensaje)
 
+(*write* significa «escribir» en inglés).
 Si el mensaje es un texto literal,
 va entre comillas simples.
 Si es una variable,
@@ -141,12 +145,12 @@ va sólo el nombre de la variable.
 En el ejemplo, cuando no existen soluciones,
 la salida puede ser representada así::
 
-    Escribir('No hay soluciones')
+    Write('No hay soluciones')
 
 Cuando existe una única solución,
 se puede incluirla en el mensaje::
 
-    Escribir('La solución única es', x)
+    Write('La solución única es ', x)
 
 Comentarios
 -----------
