@@ -24,7 +24,7 @@ Contenidos del ramo
    algoritmos
    elementos
    diagramas-de-flujo
-   pseudocodigo
+..   pseudocodigo
 
 Calendario
 ----------
