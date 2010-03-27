@@ -13,6 +13,7 @@ Programación, 1er semestre de 2010
 
 :Página del ramo: http://programacion.inf.utfsm.cl
 :Página del paralelo: http://csrg.inf.utfsm.cl/~rbonvall/progra-utfsm-2010-1
+    (la versión corta http://kl.am/progra también sirve)
 
 
 Contenidos del ramo
