@@ -25,7 +25,7 @@ Contenidos del ramo
    algoritmos
    elementos
    diagramas-de-flujo
-   sentencias
+   sentencias-control
    programa
 ..   pseudocodigo
 

@@ -1,5 +1,5 @@
-Sentencias en Pascal
-====================
+Sentencias de control en Pascal
+===============================
 
 Condicional if-then
 -------------------
