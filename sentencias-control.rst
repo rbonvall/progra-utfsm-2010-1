@@ -54,25 +54,14 @@ el siguiente código entrega
 .. _cuántos días tiene un año: http://es.wikipedia.org/wiki/Año_bisiesto
 
 
-Condicional if-then-else-if-else
---------------------------------
-.. image:: _static/imagenes/if-elseif-else.png
-   :alt: (Diagrama de flujo if-then-elseif-else)
-   :align: right
-
-Para cubrir varios casos excluyentes,
-se puede utilizar varias sentencias *if* anidadas,
-en las que cada *if* va dentro de la parte *else*
-del condicional anterior.
-
-
 Ciclo while
 -----------
 .. image:: _static/imagenes/while.png
    :alt: (Diagrama de flujo while-do)
    :align: right
 
-El ciclo **while** ejecuta instrucciones
+El ciclo **while** ejecuta
+una secuencia de instrucciones
 mientras una condición sea verdadera.
 
 La condición es evaluada antes de cada iteración.
@@ -90,7 +79,8 @@ Ciclo repeat-until
    :alt: (Diagrama de flujo repeat-until)
    :align: right
 
-El ciclo **repeat-until** ejecuta instrucciones
+El ciclo **repeat-until** ejecuta
+una secuencia instrucciones
 hasta que se cumpla la condición de término.
 
 La condición es evaluada después de cada iteración,
@@ -114,5 +104,4 @@ Ciclo for
    :alt: (Diagrama de flujo for-do)
    :align: right
 
-.. El ciclo **for**
 
