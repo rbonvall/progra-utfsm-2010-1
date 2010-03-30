@@ -25,6 +25,8 @@ Contenidos del ramo
    algoritmos
    elementos
    diagramas-de-flujo
+   sentencias
+   programa
 ..   pseudocodigo
 
 Calendario
