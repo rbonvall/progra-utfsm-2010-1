@@ -65,7 +65,7 @@ Esto *no* significa que 15 = 16.
 Condicionales
 -------------
 
-.. index:: condicional, sí-entonces, sí-entonces-si-no
+.. index:: condicional
 
 A veces un algoritmo debe realizar pasos diferentes
 bajo condiciones distintas.
@@ -81,7 +81,7 @@ verdadero o falso.
 Ciclos
 ------
 
-.. index:: ciclo, condición de término
+.. index:: ciclo, condición de término, iteración
 
 Un **ciclo** ocurre cuando
 un algoritmo ejecuta una serie de instrucciones
@@ -91,6 +91,8 @@ Como un algoritmo no puede quedarse pegado,
 un ciclo debe tener además una condición de término,
 cuyo valor indica si el ciclo debe continuar o terminar.
 
+Cada ejecución de un ciclo se llama **iteración**.
+
 El ejemplo no tiene ciclos.
 
 Entrada
@@ -99,11 +101,10 @@ Entrada
 .. index:: entrada, lectura
 
 Cuando un algoritmo necesita recibir un dato,
-se representa así::
+lo podemos representar así::
 
-    Read(variable)
+    Leer(variable)
 
-(*read* significa «leer» en inglés).
 Durante la ejecución,
 esto significa que el dato
 queda guardado en la variable.
@@ -111,9 +112,9 @@ queda guardado en la variable.
 En el ejemplo, la entrada ocurre en el paso 1,
 y puede ser representada así::
 
-    Read(a)
-    Read(b)
-    Read(c)
+    Leer(a)
+    Leer(b)
+    Leer(c)
 
 Salida
 ------
@@ -123,11 +124,10 @@ Salida
 Una vez que el algoritmo ha resuelto el problema
 para el que fue diseñado,
 debe entregar sus resultados como un mensaje.
-La salida se representa así::
+La salida puede ser representada así::
 
-    Write(mensaje)
+    Escribir(mensaje)
 
-(*write* significa «escribir» en inglés).
 Si el mensaje es un texto literal,
 va entre comillas simples.
 Si es una variable,
@@ -136,12 +136,29 @@ va sólo el nombre de la variable.
 En el ejemplo, cuando no existen soluciones,
 la salida puede ser representada así::
 
-    Write('No hay soluciones')
+    Escribir('No hay soluciones')
 
 Cuando existe una única solución,
 se puede incluirla en el mensaje::
 
-    Write('La solución única es ', x)
+    Escribir('La solución única es ', x)
+
+-----
+
+Las notaciones que hemos introducido
+son útiles para describir un algoritmo 
+de manera estructurada.
+
+Cuando usamos esta notación de manera informal,
+se denomina **pseudocódigo**.
+En este caso,
+es posible tomarse ciertas libertades
+que hacen que el algoritmo más fácil de entender.
+
+Cuando escribamos programas de verdad,
+cada uno de estos elementos
+deberá ser representados de manera rigurosa
+usando código en Pascal.
 
 Comentarios
 -----------
