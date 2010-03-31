@@ -101,6 +101,23 @@ La sintaxis es la siguiente::
     while condición do
         sentencia;
 
+Por ejemplo,
+el siguiente código
+muestra por pantalla
+la `secuencia de Collatz`_
+del número ingresado por el usuario::
+
+    Read(n)
+    while n > 0 do
+    begin
+        WriteLn(n);
+        if n mod 2 = 0 then
+            n := n div 2;
+        else
+            n := 3 * n + 1;
+    end;
+
+.. _secuencia de Collatz: http://es.wikipedia.org/wiki/Conjetura_de_Collatz
 
 
 Ciclo repeat-until
