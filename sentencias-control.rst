@@ -107,7 +107,7 @@ muestra por pantalla
 la `secuencia de Collatz`_
 del número ingresado por el usuario::
 
-    Read(n)
+    Read(n);
     while n > 0 do
     begin
         WriteLn(n);
