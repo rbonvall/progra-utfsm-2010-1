@@ -46,8 +46,8 @@ no se hace nada.
 
 La sintaxis es la siguiente::
 
-    if condicion then
-        sentencia en el caso verdadero;
+    if {condición} then
+        {sentencia en el caso verdadero};
 
 Por ejemplo,
 el siguente código felicita a alguien
@@ -70,10 +70,10 @@ decide qué instrucciones ejecutar
 dependiendo si una condición es verdadera o falsa.
 La sintaxis es la siguiente::
 
-    if condicion then
-        sentencia en el caso verdadero
+    if {condición} then
+        {sentencia en el caso verdadero};
     else
-        sentencia en el caso falso;
+        {sentencia en el caso falso};
 
 Por ejemplo,
 el siguiente código permite obtener
@@ -107,8 +107,8 @@ el ciclo no se ejecutará ninguna vez.
 
 La sintaxis es la siguiente::
 
-    while condición do
-        sentencia;
+    while {condición} do
+        {sentencia};
 
 Por ejemplo,
 el siguiente código
@@ -153,8 +153,8 @@ por lo menos una vez.
 La sintaxis es la siguiente::
 
     repeat
-        instrucciones;
-    until condición;
+        {sentencia};
+    until {condición};
 
 A diferencia de las demás sentencias,
 no es necesario usar ``begin`` y ``end``
@@ -177,8 +177,8 @@ que toma diferentes valores en cada iteración.
 
 La sintaxis es la siguiente::
 
-    for variable := valorInicial to valorFinal do
-        instrucción;
+    for {variable} := {valor inicial} to {valor final} do
+        {sentencia};
 
 Por ejemplo,
 el siguiente código suma los números del uno al diez::
