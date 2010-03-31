@@ -1,5 +1,25 @@
 Sentencias de control en Pascal
 ===============================
+.. index:: sentencia de control
+
+Además de las sentencias simples,
+que son ejecutadas en secuencia,
+existen **sentencias de control**
+que permiten modificar el flujo del programa
+introduciendo ciclos y condicionales.
+
+Una secuencia de control
+incluye otra sentencia dentro de sí.
+Por ejemplo, una sentencia condicional
+incluye la sentencia que puede o no ejecutarse
+dependiendo de una condición.
+
+.. index:: begin-end
+
+Para poner más de una sentencia
+dentro de una sentencia de control,
+es necesario encerrarlas
+entre los delimitadores ``begin`` y ``end``.
 
 Condicional if-then
 -------------------
@@ -18,7 +38,7 @@ no se hace nada.
 La sintaxis es la siguiente::
 
     if condicion then
-        instrucción en el caso verdadero;
+        sentencia en el caso verdadero;
 
 Por ejemplo,
 el siguente código felicita a alguien
@@ -42,9 +62,9 @@ dependiendo si una condición es verdadera o falsa.
 La sintaxis es la siguiente::
 
     if condicion then
-        instrucción en el caso verdadero
+        sentencia en el caso verdadero
     else
-        instrucción en el caso falso;
+        sentencia en el caso falso;
 
 Por ejemplo,
 el siguiente código permite obtener
@@ -79,7 +99,9 @@ el ciclo no se ejecutará ninguna vez.
 La sintaxis es la siguiente::
 
     while condición do
-        instrucción;
+        sentencia;
+
+
 
 Ciclo repeat-until
 ------------------
