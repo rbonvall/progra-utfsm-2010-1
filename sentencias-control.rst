@@ -21,6 +21,15 @@ dentro de una sentencia de control,
 es necesario encerrarlas
 entre los delimitadores ``begin`` y ``end``.
 
+.. index:: indentación
+
+Al escribir las sentencias que van dentro de una sentencia de control,
+se acostumbra a comenzar el renglón varias columnas más adelante.
+Esto se llama **indentación**,
+y es crucial para entender programas complejos.
+Para indentar, lo típico es usar cuatro espacios.
+Todos los ejemplos en esta sección están debidamente indentados.
+
 Condicional if-then
 -------------------
 .. index:: if-then
