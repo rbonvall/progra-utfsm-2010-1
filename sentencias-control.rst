@@ -119,6 +119,11 @@ del número ingresado por el usuario::
 
 .. _secuencia de Collatz: http://es.wikipedia.org/wiki/Conjetura_de_Collatz
 
+En este ejemplo,
+hay más de una sentencia en el cuerpo del ``while``,
+por lo que se utiliza ``begin`` y ``end``
+para delimitarlas.
+
 
 Ciclo repeat-until
 ------------------
