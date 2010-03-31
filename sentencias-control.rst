@@ -3,14 +3,18 @@ Sentencias de control en Pascal
 
 Condicional if-then
 -------------------
+.. index:: if-then
 .. image:: _static/imagenes/if.png
    :alt: (Diagrama de flujo if-then)
    :align: right
 
-La sentencia **if-then** ejecuta instrucciones
+La sentencia **if-then**
+(en español: «sí-entonces»)
+ejecuta instrucciones
 sólo si se cumple una condición.
 Si la condición es falsa,
 no se hace nada.
+
 La sintaxis es la siguiente::
 
     if condicion then
@@ -26,11 +30,13 @@ que aprobó la asignatura::
 
 Condicional if-then-else
 ------------------------
+.. index:: if-then-else
 .. image:: _static/imagenes/if-else.png
    :alt: (Diagrama de flujo if-then-else)
    :align: right
 
 La sentencia **if-then-else**
+(«sí-entonces-o-si-no»)
 decide qué instrucciones ejecutar
 dependiendo si una condición es verdadera o falsa.
 La sintaxis es la siguiente::
@@ -41,8 +47,8 @@ La sintaxis es la siguiente::
         instrucción en el caso falso;
 
 Por ejemplo,
-el siguiente código entrega
-`cuántos días tiene un año`::
+el siguiente código permite obtener
+`cuántos días tiene`_ un año dado::
 
     Read(year);
     if (year mod 4 = 0) and ((year mod 100 <> 0) or
@@ -51,17 +57,19 @@ el siguiente código entrega
     else
         WriteLn(year, ' tiene ', 365, ' dias');
 
-.. _cuántos días tiene un año: http://es.wikipedia.org/wiki/Año_bisiesto
+.. _cuántos días tiene: http://es.wikipedia.org/wiki/Año_bisiesto
 
 
 Ciclo while
 -----------
+.. index:: while
 .. image:: _static/imagenes/while.png
    :alt: (Diagrama de flujo while-do)
    :align: right
 
-El ciclo **while** ejecuta
-una secuencia de instrucciones
+El ciclo **while**
+(«mientras»)
+ejecuta una secuencia de instrucciones
 mientras una condición sea verdadera.
 
 La condición es evaluada antes de cada iteración.
@@ -75,12 +83,14 @@ La sintaxis es la siguiente::
 
 Ciclo repeat-until
 ------------------
+.. index:: repeat-until
 .. image:: _static/imagenes/repeat.png
    :alt: (Diagrama de flujo repeat-until)
    :align: right
 
-El ciclo **repeat-until** ejecuta
-una secuencia instrucciones
+El ciclo **repeat-until**
+(«repetir-hasta»)
+ejecuta una secuencia de instrucciones
 hasta que se cumpla la condición de término.
 
 La condición es evaluada después de cada iteración,
@@ -100,8 +110,59 @@ al poner más de una instrucción dentro del ``repeat``.
 
 Ciclo for
 ---------
+.. index:: for, variable de control
 .. image:: _static/imagenes/for.png
    :alt: (Diagrama de flujo for-do)
    :align: right
 
+El ciclo **for**
+(«para»)
+ejecuta una secuencia de instrucciones
+un número predeterminado de veces.
+Un ciclo *for* utiliza una **variable de control**
+que toma diferentes valores en cada iteración.
+
+La sintaxis es la siguiente::
+
+    for variable := valorInicial to valorFinal do
+        instrucción;
+
+Por ejemplo,
+el siguiente código suma los números del uno al diez::
+
+    suma := 0;
+    for i := 1 to 10 do
+        suma := suma + i;
+
+En el ejemplo, el ciclo se ejecuta diez veces.
+Después de cada iteración,
+el valor de ``i`` es incrementado en 1.
+
+.. index:: step
+
+Es posible usar incrementos distintos de 1
+usando el modificador ``step``.
+Por ejemplo,
+el siguiente código suma los números impares
+del uno al quince::
+
+    suma := 0;
+    for i := 1 to 15 step 2 do
+        suma := suma + i;
+
+.. index:: downto
+
+También es posible hacer
+que la variable de control tome valores de mayor a menor,
+usando ``downto`` en lugar de ``to``.
+Por ejemplo,
+el siguiente código imprime una cuenta regresiva::
+
+    for s := 20 downto 1 do
+        WriteLn(s);
+    WriteLn('¡Feliz año nuevo!');
+
+Comentarios
+-----------
+.. include:: disqus.rst
 
