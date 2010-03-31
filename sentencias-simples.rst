@@ -39,7 +39,7 @@ Salida
 .. index:: salida, Write, WriteLn
 
 En Pascal existen dos funciones
-para 
+para entregar información al usuario.
 
 La función **Write**
 (en español: «escribir»)
