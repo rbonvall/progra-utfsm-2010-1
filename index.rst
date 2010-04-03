@@ -27,7 +27,6 @@ Contenidos del ramo
    sentencias-simples
    sentencias-control
    programa
-..   pseudocodigo
 
 Instalación y uso de DevPascal
 ------------------------------
