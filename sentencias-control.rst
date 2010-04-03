@@ -163,17 +163,16 @@ al poner más de una instrucción dentro del ``repeat``.
 
 Ciclo for
 ---------
-.. index:: for, variable de control
-.. image:: _static/imagenes/for.png
-   :alt: (Diagrama de flujo for-do)
-   :align: right
-
 El ciclo **for**
 («para»)
 ejecuta una secuencia de instrucciones
 un número predeterminado de veces.
 Un ciclo *for* utiliza una **variable de control**
 que toma diferentes valores en cada iteración.
+
+.. index:: for, variable de control
+.. image:: _static/imagenes/for.png
+   :alt: (Diagrama de flujo for-do)
 
 La sintaxis es la siguiente::
 
