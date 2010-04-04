@@ -38,7 +38,7 @@ Condicional if-then
    :align: right
 
 La sentencia **if-then**
-(en español: «sí-entonces»)
+(en español: «si-entonces»)
 ejecuta instrucciones
 sólo si se cumple una condición.
 Si la condición es falsa,
@@ -65,7 +65,7 @@ Condicional if-then-else
    :align: right
 
 La sentencia **if-then-else**
-(«sí-entonces-o-si-no»)
+(«si-entonces-o-si-no»)
 decide qué instrucciones ejecutar
 dependiendo si una condición es verdadera o falsa.
 La sintaxis es la siguiente::
