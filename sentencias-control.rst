@@ -190,11 +190,13 @@ En el ejemplo, el ciclo se ejecuta diez veces.
 Después de cada iteración,
 el valor de ``i`` es incrementado en 1.
 
+Si el valor final es menor al valor inicial,
+el ciclo nunca es ejecutado.
+
 .. index:: downto
 
-También es posible hacer
-que la variable de control tome valores de mayor a menor,
-usando ``downto`` en lugar de ``to``.
+Para hacer que la variable de control tome valores de mayor a menor,
+hay que reemplazar ``to`` por ``downto``.
 Por ejemplo,
 el siguiente código imprime una cuenta regresiva::
 
