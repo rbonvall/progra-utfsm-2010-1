@@ -190,18 +190,6 @@ En el ejemplo, el ciclo se ejecuta diez veces.
 Después de cada iteración,
 el valor de ``i`` es incrementado en 1.
 
-.. index:: step
-
-Es posible usar incrementos distintos de 1
-usando el modificador ``step``.
-Por ejemplo,
-el siguiente código suma los números impares
-del uno al quince::
-
-    suma := 0;
-    for i := 1 to 15 step 2 do
-        suma := suma + i;
-
 .. index:: downto
 
 También es posible hacer
