@@ -104,8 +104,54 @@ las condiciones de los tres últimos *ifs*
 serán evaluadas de todas maneras,
 aunque no sea posible satisfacerlas de ningún modo.
 
+Para evitar escribir tantas veces lo mismo,
+otra manera de estructurar el código puede ser la siguente::
+
+    if sueldo < 1000 then
+        tasa := 0
+    else if sueldo < 2000 then
+        tasa := 0.05
+    else if sueldo < 4000 then
+        tasa := 0.10
+    else
+        tasa := 0.12;
+    impuesto := Trunc(tasa * sueldo);
+
+
 Encontrar el máximo
 -------------------
+El problema computacional es:
+
+**Entrada**:
+    una secuencia de números enteros distintos de cero;
+    la entrada termina cuando el usuario ingresa un cero.
+
+**Salida**:
+    el mayor de los números ingresados.
+
+Una estrategia que uno podría proponer es:
+guardar todos los números que ingresa el usuario,
+y al final buscar cuál es el mayor.
+El problema es que de antemano
+no se sabe cuántos números serán,
+por lo que no podemos saber cuántas variables crear.
+
+Una mejor estrategia es:
+guardar sólo el máximo número hasta el momento,
+y actualizarlo cuando el usuario ingrese uno que sea mayor.
+
+Escribir el programa queda de tarea.
+
+Además,
+recomiendo resolver también la siguiente variante:
+en vez de mostrar el número mayor,
+mostrar en qué lugar fue ingresado el número máximo.
+Por ejemplo, si el usuario ingresó
+10, 4, 17, 9, y 1,
+el programa debe entregar 3 como salida,
+pues el número mayor fue el tercero ingresado.
+
+
 
 Comentarios
 -----------
