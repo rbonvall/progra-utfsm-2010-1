@@ -121,6 +121,11 @@ se hacen sólo una vez al final.
 .. literalinclude:: programas/impuesto-case.pas
    :linenos:
 
+La constante ``MaxInt`` es igual al máximo número entero
+representable en una variable ``Integer``.
+Para efectos prácticos,
+``-MaxInt`` puede ser considerado un sinónimo de :math:`-∞`.
+
 
 Encontrar el máximo
 -------------------
