@@ -66,8 +66,8 @@ La estrategia para diseñar el programa
 es separar todos los casos
 para asignar el impuesto.
 
-Una manera de implementar la solución es usando *ifs* anidados
-(es decir, uno dentro del otro):
+Una manera de implementar la solución es usando *ifs* encadenados
+(es decir, cada uno dentro de la sección *else* del *if* anterior):
 
 .. literalinclude:: programas/impuesto.pas
    :linenos:
@@ -85,7 +85,7 @@ Otra posibilidad es evitar el uso de valores reales
 usando sólo operaciones enteras como ``div``,
 tal como algunos propusieron en clases.
 
-En vez de usar condicionales anidados,
+En vez de usar condicionales encadenados,
 también se pueden poner varios en secuencia::
 
     if sueldo < 1000 then
