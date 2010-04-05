@@ -29,8 +29,9 @@ Una manera de escribir el programa es la siguiente:
 
 .. literalinclude:: programas/abs.pas
 
-Notar que la última sentencia dentro del ``if``
-no lleva punto y coma.
+Notar que la última sentencia dentro del caso positivo del ``if``
+no lleva punto y coma,
+pues el ``else`` actúa como separador.
 En clases cometí ese error.
 
 En la práctica, un programa como éste no es necesario,
