@@ -27,6 +27,7 @@ Contenidos del ramo
    sentencias-simples
    sentencias-control
    programa
+   ejercicios-20100405
 
 Instalación y uso de DevPascal
 ------------------------------
