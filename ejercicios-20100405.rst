@@ -104,18 +104,22 @@ las condiciones de los tres últimos *ifs*
 serán evaluadas de todas maneras,
 aunque no sea posible satisfacerlas de ningún modo.
 
-Para evitar escribir tantas veces lo mismo,
-otra manera de estructurar el código puede ser la siguente::
+El código a continuación
+ilustra otra manera de escribir el mismo programa.
+Hay dos diferencias importantes:
 
-    if sueldo < 1000 then
-        tasa := 0
-    else if sueldo < 2000 then
-        tasa := 0.05
-    else if sueldo < 4000 then
-        tasa := 0.10
-    else
-        tasa := 0.12;
-    impuesto := Trunc(tasa * sueldo);
+* en lugar de *ifs* se utiliza una sentencia *case* con rangos de valores, y
+* en vez de asignar directamente el impuesto,
+  se asigna la tasa.
+
+La segunda diferencia
+introduce la ventaja de requerir menos código repetido,
+pues la multiplicación por ``sueldo``
+y la llamada a ``Trunc()``
+se hacen sólo una vez al final.
+
+.. literalinclude:: programas/impuesto-case.pas
+   :linenos:
 
 
 Encontrar el máximo
