@@ -27,7 +27,7 @@ Contenidos del ramo
    diagramas-de-flujo
    sentencias-control
    programa
-..   pseudocodigo
+   ejercicios-20100405
 
 Calendario
 ----------
