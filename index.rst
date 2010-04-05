@@ -7,13 +7,12 @@ Programación, 1er semestre de 2010
 ==================================
 
 :Profesor: Roberto Bonvallet <roberto.bonvallet@usm.cl>
-:Ayudante: *Por definir*
+:Ayudante: Ignacio Villacura
 :Clases:  Lunes 1-2, Miércoles 1-2
 :Ayudantía: *Por definir*
 
 :Página del ramo: http://programacion.inf.utfsm.cl
-:Página del paralelo: http://csrg.inf.utfsm.cl/~rbonvall/progra-utfsm-2010-1
-    (la versión corta http://kl.am/progra también sirve)
+:Página del paralelo: http://kl.am/progra (redirige aquí)
 
 
 Contenidos del ramo
@@ -25,9 +24,17 @@ Contenidos del ramo
    algoritmos
    elementos
    diagramas-de-flujo
+   sentencias-simples
    sentencias-control
    programa
-   ejercicios-20100405
+
+Instalación y uso de DevPascal
+------------------------------
+Para aprender a instalar y usar la IDE y el compilador,
+les recomiendo esta `guía práctica`_
+elaborada por el profesor Renzo Stanley.
+
+.. _guía práctica: http://labs.renzostanley.com/docs/compilacion-devpas.pdf
 
 Calendario
 ----------

@@ -124,7 +124,7 @@ con los que un algoritmo es descrito.
 A continuación,
 aprenderemos dos medios para representar un algoritmo:
 los diagramas de flujo
-y los lenguajes de programación.
+y el lenguaje de programación Pascal.
 
 Comentarios
 -----------
