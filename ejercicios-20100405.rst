@@ -69,7 +69,7 @@ para asignar el impuesto.
 Una manera de implementar la solución es usando *ifs* anidados
 (es decir, uno dentro del otro):
 
-.. literalinclude:: programas/abs.pas
+.. literalinclude:: programas/impuesto.pas
    :linenos:
 
 En clases yo dije que uno podía mezclar
