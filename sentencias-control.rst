@@ -71,7 +71,7 @@ dependiendo si una condición es verdadera o falsa.
 La sintaxis es la siguiente::
 
     if {condición} then
-        {sentencia en el caso verdadero};
+        {sentencia en el caso verdadero}
     else
         {sentencia en el caso falso};
 
@@ -88,6 +88,45 @@ el siguiente código permite obtener
 
 .. _cuántos días tiene: http://es.wikipedia.org/wiki/Año_bisiesto
 
+Condicional case-of
+-------------------
+.. index:: case-of
+
+La sentencia **case-of**
+(«caso-de»)
+decide qué instrucciones ejecutar
+dependiendo del valor de una expresión.
+Es una manera abreviada
+de escribir varios **ifs** uno después del otro.
+
+La sintaxis es la siguiente::
+
+    case {expresión} do
+    {valor1}:
+        {sentencia};
+    {valor2}:
+        {sentencia};
+    ...
+    end
+
+Por ejemplo,
+el siguiente código indica si un número es par o no::
+
+    Read(n);
+    case n mod 2 of
+    0:
+        WriteLn('par');
+    1:
+        WriteLn('impar');
+    end;
+
+En una mismo caso es posible poner
+varios valores separados por comas.
+Además, se puede especificar rangos de valores
+separados por ``..``.
+
+También es posible incluir una cláusula ``else``
+para cubrir el resto de los casos.
 
 Ciclo while
 -----------
