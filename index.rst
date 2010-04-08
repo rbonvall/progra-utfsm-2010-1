@@ -9,7 +9,7 @@ Programación, 1er semestre de 2010
 :Profesor: Roberto Bonvallet <roberto.bonvallet@usm.cl>
 :Ayudante: Ignacio Villacura
 :Clases:  Lunes 1-2, Miércoles 1-2
-:Ayudantía: *Por definir*
+:Ayudantía: Martes 9-10 en sala por definir
 
 :Página del ramo: http://programacion.inf.utfsm.cl
 :Página del paralelo: http://kl.am/progra (redirige aquí)
