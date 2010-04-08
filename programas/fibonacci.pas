@@ -19,17 +19,16 @@ begin
     {inicializar variables}
     actual := 1;
     anterior := 0;
-    cuenta := 1;
 
     {iterar hasta el n-esimo numero de Fibonacci}
-    while cuenta < n do
+    for cuenta := 1 to n - 1 do
     begin
         suma := actual + anterior;
         anterior := actual;
         actual := suma;
-        cuenta := cuenta + 1
     end;
 
     {salida}
     WriteLn('F(', n, ') = ', actual);
 end.
+
