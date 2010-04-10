@@ -9,7 +9,7 @@ Programación, 1er semestre de 2010
 :Profesor: Roberto Bonvallet <roberto.bonvallet@usm.cl>
 :Ayudante: Ignacio Villacura
 :Clases:  Lunes 1-2, Miércoles 1-2
-:Ayudantía: *Por definir*
+:Ayudantía: Martes 9-10 en sala por definir
 
 :Página del ramo: http://programacion.inf.utfsm.cl
 :Página del paralelo: http://kl.am/progra (redirige aquí)
@@ -27,6 +27,8 @@ Contenidos del ramo
    sentencias-simples
    sentencias-control
    programa
+   ejercicios-20100405
+   ejercicios-20100407
 
 Instalación y uso de Dev+GNU Pascal
 -----------------------------------
