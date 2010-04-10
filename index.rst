@@ -28,13 +28,28 @@ Contenidos del ramo
    sentencias-control
    programa
 
-Instalación y uso de DevPascal
-------------------------------
+Instalación y uso de Dev+GNU Pascal
+-----------------------------------
 Para aprender a instalar y usar la IDE y el compilador,
 les recomiendo esta `guía práctica`_
 elaborada por el profesor Renzo Stanley.
 
 .. _guía práctica: http://labs.renzostanley.com/docs/compilacion-devpas.pdf
+
+En el siguiente video
+pueden ver una demostración
+de cómo escribir, compilar y ejecutar un programa
+en Dev+GNU Pascal:
+
+.. raw:: html
+
+    <object width="640" height="505">
+      <param name="movie" value="http://www.youtube.com/v/D2PZ6elzwRQ&hl=es_ES&fs=1&rel=0&hd=1"></param>
+      <param name="allowFullScreen" value="true"></param>
+      <param name="allowscriptaccess" value="always"></param>
+      <embed src="http://www.youtube.com/v/D2PZ6elzwRQ&hl=es_ES&fs=1&rel=0&hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="505"></embed>
+    </object>
+
 
 Calendario
 ----------
