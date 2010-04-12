@@ -29,6 +29,7 @@ Contenidos del ramo
    programa
    ejercicios-20100405
    ejercicios-20100407
+   ejercicios-20100412
 
 Instalación y uso de Dev+GNU Pascal
 -----------------------------------
