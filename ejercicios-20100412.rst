@@ -1,5 +1,5 @@
 Ejercicios de la clase del 12 de abril
-=====================================
+======================================
 
 En la clase aprendimos a trabajar con dígitos de números,
 y lo aplicamos a la detección de palíndromos.
