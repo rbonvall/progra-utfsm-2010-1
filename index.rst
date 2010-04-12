@@ -31,6 +31,16 @@ Contenidos del ramo
    ejercicios-20100407
    ejercicios-20100412
 
+Guía de ejercicios
+------------------
+Durante todo el semestre
+pueden ejercitar con esta `guía de ejercicios`_
+(documento PDF, 356 `kb`_)
+recopilados por el profesor Carlos Castro.
+
+.. _guía de ejercicios: http://anibal.gled.cl/Teaching%20Activities/IWI-131/2010-01/Gu%eda%20de%20Ejericicios.pdf
+.. _kb: http://es.wikipedia.org/wiki/Kilobyte
+
 Instalación y uso de Dev+GNU Pascal
 -----------------------------------
 Para aprender a instalar y usar la IDE y el compilador,
