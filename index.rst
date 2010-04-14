@@ -20,7 +20,7 @@ Contenidos del ramo
 -------------------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    algoritmos
    elementos
