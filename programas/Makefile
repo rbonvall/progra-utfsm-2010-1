@@ -5,6 +5,6 @@ all: $(TARGETS)
 %: %.pas
 	gpc $< -o $@
 clean:
-	rm -f $(TARGETS)
+	rm -f $(TARGETS) *.o
 
 .PHONY: clean all
