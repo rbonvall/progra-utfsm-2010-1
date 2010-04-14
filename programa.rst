@@ -12,7 +12,5 @@ Los programas en Pascal tienen la siguiente estructura::
 
 
 
-Comentarios
------------
 .. include:: disqus.rst
 

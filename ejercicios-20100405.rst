@@ -161,8 +161,5 @@ el programa debe entregar 3 como salida,
 pues el número mayor fue el tercero ingresado.
 
 
-
-Comentarios
------------
 .. include:: disqus.rst
 

@@ -126,7 +126,5 @@ aprenderemos dos medios para representar un algoritmo:
 los diagramas de flujo
 y el lenguaje de programación Pascal.
 
-Comentarios
------------
 .. include:: disqus.rst
 

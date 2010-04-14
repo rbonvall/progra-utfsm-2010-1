@@ -116,7 +116,5 @@ es un palíndromo,
 basta con reemplazar ``base = 10`` por ``base = 16``
 en el programa de arriba.
 
-Comentarios
------------
 .. include:: disqus.rst
 

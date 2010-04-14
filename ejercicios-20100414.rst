@@ -80,7 +80,5 @@ El programa terminado
 .. literalinclude:: programas/tabla.pas
    :linenos:
 
-Comentarios
------------
 .. include:: disqus.rst
 
