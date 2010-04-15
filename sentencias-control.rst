@@ -243,7 +243,5 @@ el siguiente código imprime una cuenta regresiva::
         WriteLn(s);
     WriteLn('¡Feliz año nuevo!');
 
-Comentarios
------------
 .. include:: disqus.rst
 

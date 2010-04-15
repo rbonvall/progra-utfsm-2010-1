@@ -33,7 +33,5 @@ puede ser representado así:
   que en la figura están pintados de azul.
   Se puede poner varias instrucciones en un mismo bloque.
 
-Comentarios
------------
 .. include:: disqus.rst
 

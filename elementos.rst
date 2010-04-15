@@ -160,7 +160,5 @@ cada uno de estos elementos
 deberá ser representados de manera rigurosa
 usando código en Pascal.
 
-Comentarios
------------
 .. include:: disqus.rst
 

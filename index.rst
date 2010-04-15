@@ -9,7 +9,8 @@ Programación, 1er semestre de 2010
 :Profesor: Roberto Bonvallet <roberto.bonvallet@usm.cl>
 :Ayudante: Ignacio Villacura
 :Clases:  Lunes 1-2, Miércoles 1-2
-:Ayudantía: Martes 9-10 en sala por definir
+:Ayudantía: Martes 9-10 (todavía no hay sala, así que
+            **se reunirán con el ayudante en el hall del edificio C**)
 
 :Página del ramo: http://programacion.inf.utfsm.cl
 :Página del paralelo: http://kl.am/progra (redirige aquí)
@@ -19,7 +20,7 @@ Contenidos del ramo
 -------------------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    algoritmos
    elementos
@@ -29,6 +30,18 @@ Contenidos del ramo
    programa
    ejercicios-20100405
    ejercicios-20100407
+   ejercicios-20100412
+   ejercicios-20100414
+
+Guía de ejercicios
+------------------
+Durante todo el semestre
+pueden ejercitar con esta `guía de ejercicios`_
+(documento PDF, 356 `kb`_)
+recopilados por el profesor Carlos Castro.
+
+.. _guía de ejercicios: http://anibal.gled.cl/Teaching%20Activities/IWI-131/2010-01/Gu%eda%20de%20Ejericicios.pdf
+.. _kb: http://es.wikipedia.org/wiki/Kilobyte
 
 Instalación y uso de Dev+GNU Pascal
 -----------------------------------

@@ -172,7 +172,5 @@ Tarea
   Para :math:`m = 21`, el algoritmo debe decir ``sí``.
 
 
-Comentarios
------------
 .. include:: disqus.rst
 

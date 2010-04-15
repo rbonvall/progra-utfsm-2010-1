@@ -129,7 +129,5 @@ los valores quedarán guardados en las variables correspondientes.
     sólo hubiera quedado guardado ``'Perico'``.
 
 
-Comentarios
------------
 .. include:: disqus.rst
 
