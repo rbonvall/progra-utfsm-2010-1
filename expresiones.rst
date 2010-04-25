@@ -107,7 +107,7 @@ Algunos operadores aritméticos binarios son:
 * la **multiplicación** ``*``;
 * la **división real** ``/``;
 * la **división entera** ``div`` (cuociente de la división);
-* el **módulo** ``mod`` (resto de la división);
+* el **módulo** ``mod`` (resto de la división).
 
 Los operadores ``+``, ``-`` y ``*``
 pueden tener como operandos números enteros o reales.
@@ -161,8 +161,8 @@ Algunos operadores relacionales son:
 * el **menor o igual que** ``<=``;
 
 
-Precedencia
------------
+Precedencia de operadores
+-------------------------
 .. index:: precedencia de operadores, paréntesis
 
 La **precedencia de operadores**
@@ -187,7 +187,7 @@ Operaciones que están en un mismo nivel
 son evaluadas en el orden en que aparecen en la expresión,
 de izquierda a derecha::
 
-    15 * 12 mod 7     {→ 5  (es igual a (15 * 12) mod 7}
+    15 * 12 mod 7     {→ 5  pues es igual a (15 * 12) mod 7}
 
 Para forzar un orden de evaluación distinto a la regla de precedencia,
 deben usarse paréntesis::
@@ -205,6 +205,9 @@ pues ``and`` tiene mayor prioridad que ``<``,
 así que la primera subexpresión que se evaluará
 será ``b and c``, que es incorrecta pues ``b`` y ``c``
 deben ser números, y ``<`` opera sólo sobre valores booleanos.
+La siguiente expresión es correcta::
+
+    (a < b) and (c < d)
 
 
 .. include:: disqus.rst
