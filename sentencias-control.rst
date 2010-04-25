@@ -156,13 +156,13 @@ la `secuencia de Collatz`_
 del número ingresado por el usuario::
 
     Read(n);
-    while n > 0 do
+    while n > 1 do
     begin
-        WriteLn(n);
         if n mod 2 = 0 then
-            n := n div 2;
+            n := n div 2
         else
             n := 3 * n + 1;
+        WriteLn(n);
     end;
 
 .. _secuencia de Collatz: http://es.wikipedia.org/wiki/Conjetura_de_Collatz
