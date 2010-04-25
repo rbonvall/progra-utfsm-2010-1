@@ -53,9 +53,8 @@ en la expresión ``2.0 + x``
 el operador ``+`` es un operador binario que representa la suma,
 y sus operandos son ``2.0`` y ``x``.
 
-Los principales operadores se pueden clasificar en:
-lógicos, aritméticos y relacionales.
-Hay otros más que veremos más adelante.
+Los operadores en Pascal se pueden clasificar en:
+aritméticos, relacionales y lógicos.
 
 Operadores lógicos
 ~~~~~~~~~~~~~~~~~~
@@ -63,7 +62,7 @@ Operadores lógicos
 
 Los **operadores lógicos** son los que tienen valores lógicos
 (verdadero y falso) como operandos y como resultado.
-Los valores lógicos posibles son
+Los dos valores lógicos posibles son
 ``True`` (verdadero) y ``False`` (falso).
 
 Hay tres operadores lógicos:
@@ -99,7 +98,7 @@ Operadores aritméticos
 Los **operadores aritméticos** son los que representan operaciones numéricas.
 Tanto sus operandos como sus resultados son valores numéricos.
 
-.. index:: + (binario), - (binario), /, //, %, ** , *
+.. index:: + (binario), - (binario), * , / , div , mod
 
 Algunos operadores aritméticos binarios son:
 
@@ -107,40 +106,41 @@ Algunos operadores aritméticos binarios son:
 * la **resta** ``-``;
 * la **multiplicación** ``*``;
 * la **división real** ``/``;
-* la **división entera** ``//`` (cuociente de la división);
-* el **módulo** ``%`` (resto de la división);
-* la **potencia** ``**`` («elevado a»).
+* la **división entera** ``div`` (cuociente de la división);
+* el **módulo** ``mod`` (resto de la división);
 
-Las divisiones y el módulo suelen causar confusión.
-Algunos ejemplos que pueden dejarlos más claro::
+Los operadores ``+``, ``-`` y ``*``
+pueden tener como operandos números enteros o reales.
+Si tienen al menos un operando real,
+el resultado es real.
 
-    >>> 17 / 3
-    5.666666666666667
-    >>> 17 // 3
-    5
-    >>> 17 % 3
-    2
+La división real ``/`` siempre entrega como resultado un real.
+Por ejemplo::
 
-Una relación entre ``//`` y ``%`` que siempre se cumple es::
+    4 / 2      {→ 2.0}
+    5 / 2      {→ 2.5}
+    5.1 / 2.2  {→ 2.31818181818}
+    1 / 4.0    {→ 0.25}
 
-    (a // b) * b + (a % b) == a
+La división entera ``div``
+tiene operandos enteros
+y resultado entero.
+El resultado es el cuociente de la división,
+es decir, no tiene decimales::
 
-.. index:: + (unario), - (unario), positivo, negativo
+    4 div 2   {→ 2}
+    5 div 2   {→ 2}
+    22 div 7  {→ 3}
 
-Además,
-hay dos operadores aritméticos unarios:
+El módulo ``mod`` entrega el resto de la división::
 
-* el **positivo** ``+``, y
-* el **negativo** ``-``.
+    4 mod 2      {→ 0}
+    5 mod 2      {→ 1}
+    1849 mod 10  {→ 9}
 
-El positivo mantiene el signo de un valor,
-y el negativo lo cambia::
+Una relación entre ``div`` y ``mod`` que siempre se cumple es::
 
-    >>> n = -4
-    >>> +n
-    -4
-    >>> -n
-    4
+    (a div b) * b + (a mod b) = a
 
 
 Operadores relacionales
@@ -149,26 +149,17 @@ Operadores relacionales
 
 Los **operadores relacionales** son los que permiten comparar valores.
 Sus operandos son cualquier cosa que pueda ser comparada,
-y sus resultados siempre son valores lógicos.
+y sus resultados siempre son valores booleanos.
 
 Algunos operadores relacionales son:
 
-* el **igual a** ``==`` (no confundir con el ``=`` de las asignaciones);
-* el **distinto a** ``!=``;
+* el **igual a** ``=``;
+* el **distinto a** ``<>``;
 * el **mayor que** ``>``;
 * el **mayor o igual que** ``>=``;
 * el **menor que** ``<``;
 * el **menor o igual que** ``<=``;
 
-Los operadores relacionales pueden ser encadenados,
-como se usa en matemáticas,
-de la siguiente manera::
-
-    0 < x <= 10
-
-Esta expresión es equivalente a::
-
-    0 < x and <= 10
 
 Precedencia
 -----------
@@ -179,103 +170,42 @@ es una regla que especifica
 en qué orden deben ser evaluadas
 las operaciones de una expresión.
 
-La precedencia está dada por la siguiente lista,
+En Pascal, la precedencia está dada por la siguiente lista,
 en que los operadores han sido listados
-en orden de menor a mayor precedencia:
+en orden de mayor a menor precedencia:
 
-* ``or``
-* ``and``
 * ``not``
-* ``<``, ``<=``, ``>``, ``>=``, ``!=``, ``==``
-* ``+``, ``-`` (suma y resta)
-* ``*``, ``/``, ``//``, ``%``
-* ``+``, ``-`` (positivo y negativo)
-* ``**``
+* ``*``, ``/``, ``div``, ``mod``, ``and``
+* ``+``, ``-``, ``or``
+* ``<``, ``<=``, ``>``, ``>=``, ``<>``, ``=``
 
 Esto significa, por ejemplo,
 que las multiplicaciones se evalúan antes que las sumas,
-y que las comparaciones se evalúan antes que las operaciones lógicas::
+y que las comparaciones se evalúan después de las operaciones lógicas.
 
-    >>> 2 + 3 * 4
-    14
-    >>> 1 < 2 and 3 < 4
-    True
-
-Operaciones dentro de un mismo nivel
+Operaciones que están en un mismo nivel
 son evaluadas en el orden en que aparecen en la expresión,
-de izquierda a derecha.  La única excepción son las potencias,
-que son evaluadas de derecha a izquierda::
+de izquierda a derecha::
 
-    >>> 15 * 12 % 7    # es igual a (15 * 12) % 7
-    5
-    >>> 2 ** 3 ** 2   # es igual a 2 ** (3 ** 2)
-    512
+    15 * 12 mod 7     {→ 5  (es igual a (15 * 12) mod 7}
 
 Para forzar un orden de evaluación distinto a la regla de precedencia,
 deben usarse paréntesis::
 
-    >>> (2 + 3) * 4
-    20
-    >>> 15 * (12 % 7)
-    75
-    >>> (2 ** 3) ** 2
-    64
+    15 * (12 mod 7)   {→ 75}
 
-Por ejemplo, consideremos la siguiente expresión::
+Hay que tener en consideración las reglas de precedencia,
+pues aplicarlas de manera incorrecta puede conducir a resultados incorrectos.
+En algunos casos, el programa ni siquiera compilará.
+Por ejemplo, la siguiente expresión es inválida::
 
-    15 + 59 * 75 // 9 < 2 ** 3 ** 2 and (15 + 59) * 75 % n == 1
+    a < b and c < d
 
-y supongamos que la variable ``n`` tiene el valor 2.
-Aquí podemos ver cómo la expresión es evaluada
-hasta llegar al resultado final::
+pues ``and`` tiene mayor prioridad que ``<``,
+así que la primera subexpresión que se evaluará
+será ``b and c``, que es incorrecta pues ``b`` y ``c``
+deben ser números, y ``<`` opera sólo sobre valores booleanos.
 
-    15 + 59 * 75 // 9 < 2 ** 3 ** 2 and (15 + 59) * 75 % n == 1
-    #                          ↓
-    15 + 59 * 75 // 9 < 2 **   9    and (15 + 59) * 75 % n == 1
-    #                     ↓
-    15 + 59 * 75 // 9 < 512         and (15 + 59) * 75 % n == 1
-    #       ↓
-    15 +  4425   // 9 < 512         and (15 + 59) * 75 % n == 1
-    #            ↓
-    15 +        491   < 512         and (15 + 59) * 75 % n == 1
-    #                                       ↓
-    15 +        491   < 512         and    74     * 75 % n == 1
-    #                                             ↓
-    15 +        491   < 512         and          5550  % n == 1
-    #                                                    ↓
-    15 +        491   < 512         and          5550  % 2 == 1
-    #                                                  ↓
-    15 +        491   < 512         and                0   == 1
-    #  ↓
-      506             < 512         and                0   == 1
-    #                 ↓
-                     True           and                0   == 1
-    #                                                      ↓
-                     True           and                  False
-    #                                ↓
-                                   False
-
-La operación entre paréntesis ``(15 + 59)``
-debe ser evaluada antes de la multiplicación por 75,
-ya que es necesario conocer su resultado
-para poder calcular el producto.
-El momento preciso en que ello ocurre no es importante.
-
-Lo mismo ocurre con la evaluación de la variable ``n``:
-sólo importa que sea evaluada antes de ser usada
-por el operador de módulo.
-
-En el ejemplo,
-ambos casos fueron evaluados
-inmediatamente antes de que su valor sea necesario.
-
-Las reglas completas de precedencia,
-incluyendo otros operadores que aún no hemos visto,
-pueden ser consultados en
-`la sección sobre expresiones`_
-de la documentación oficial de Python.
-
-.. _la sección sobre expresiones: http://docs.python.org/release/3.1.2/reference/expressions.html#summary
 
 .. include:: disqus.rst
 

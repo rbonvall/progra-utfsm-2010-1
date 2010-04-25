@@ -23,6 +23,7 @@ Contenidos del ramo
    algoritmos
    elementos
    diagramas-de-flujo
+   expresiones
    sentencias-simples
    sentencias-control
    programa
