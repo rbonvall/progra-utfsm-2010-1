@@ -24,6 +24,7 @@ Contenidos del ramo
    elementos
    diagramas-de-flujo
    expresiones
+   funciones-predefinidas
    sentencias-simples
    sentencias-control
    programa
