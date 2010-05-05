@@ -103,8 +103,75 @@ algunas declaraciones válidas e inválidas de arreglos::
         f: Array[2,3,5,7,11] of Real;
         g: Array[0.5..9.5] of Real;
 
-Programas desarrollados en clases: desviación estándar y moda
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Arreglos multidimensionales
+---------------------------
+.. index:: arreglo multidimensional
+
+Un **arreglo multidimensional** es un arreglo
+cuyos elementos tienen más de un índice.
+
+El caso más simple son los arreglos bidimensionales,
+que tienen dos índices, y son útiles para representar datos con formato tabular,
+como tablas y matrices.
+
+Tanto en la declaración como en el uso del arreglo,
+los índices se ponen separados por comas.
+
+Por ejemplo,
+el siguiente código permite ingresar datos numéricos
+en una tabla de 5 × 3 y luego mostrarla por pantalla::
+
+    program LlenarTabla;
+    const
+        M = 5;
+        N = 3;
+    var
+        tabla: Array[1..M, 1..N] of Integer;
+        i, j: Integer;
+    begin
+        {llenar}
+        for i := 1 to M do
+            for j := 1 to N do
+                Read(tabla[i, j]);
+
+        {mostrar}
+        for i := 1 to M do
+        begin
+            for j := 1 to N do
+                Write(tabla[i, j], ' ');
+            WriteLn;
+        end;
+    end.
+
+Inicialización de arreglos
+--------------------------
+.. index:: inicialización de arreglos
+
+A veces un programa necesita tener un arreglo
+cuyos valores están dados de antemano,
+por lo que no corresponde que los ingrese el usuario.
+
+Para estos casos,
+es posible inicializar el arreglo durante la declaración.
+Por ejemplo,
+la siguiente declaracion
+inicializa un arreglo con la cantidad de días
+que tienen los meses del año::
+
+    var
+        diasMes: Array[1..12] of Integer = (31, 28, 31, 30, 31, 30,
+                                            31, 31, 30, 31, 30, 31);
+
+También se puede hacer lo mismo
+con un arreglo multidimensional::
+
+    var
+        matriz: Array[1..3, 1..3] of Integer = (( 5,  1,  4),
+                                                (-1,  0,  7),
+                                                ( 3, -2, -9));
+
+Ejemplos vistos en clases
+-------------------------
 Estos son los programas desarrollados
 en la clase del lunes 3 de mayo.
 
@@ -124,37 +191,6 @@ Determinación de la `moda`_:
 
 .. _desviación estándar: http://es.wikipedia.org/wiki/Desviación_estándar
 .. _moda: http://es.wikipedia.org/wiki/Moda_(estadística)
-
-Arreglos multidimensionales
----------------------------
-.. index:: arreglo multidimensional
-
-Un **arreglo multidimensional** es un arreglo
-cuyos elementos tienen más de un índice.
-
-El caso más simple son los arreglos bidimensionales,
-que tienen dos índices, y son útiles para representar datos con formato tabular,
-como tablas y matrices.
-
-Tanto en la declaración como en el uso del arreglo,
-los índices se ponen separados por comas.
-
-Por ejemplo,
-el siguiente código permite ingresar los datos
-de una tabla de 5 × 3 y luego mostrarla por pantalla::
-
-    program LlenarTabla;
-    const
-        M = 5, N = 3;
-    var
-        tabla: Array[1..M, 1..N] of Integer;
-        i, j: Integer;
-    begin
-        for i := 1 to M do
-            for j := 1 to N do
-                Read(tabla[i, j]);
-    end.
-
 
 .. include:: disqus.rst
 
