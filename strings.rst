@@ -43,6 +43,23 @@ usando la función ``Length()``::
     Length('perro');   {→ 5}
     Length(palabra);   {→ 14}
 
+Si se intenta almacenar un string
+cuyo largo es mayor a la capacidad de la variable,
+el valor es cortado para que entre.
+Por ejemplo,
+en el siguiente programa,
+si la entrada es ``Guadalupe``,
+la salida será ``Guad``::
+
+    program MuyCorto;
+    var
+        s: String[4];
+    begin
+        Read(s);
+        WriteLn(s);
+    end.
+
+
 Cada caracter del string puede ser referenciado
 usando su índice,
 tal como ocurre con los arreglos.
