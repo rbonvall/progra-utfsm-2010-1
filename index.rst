@@ -34,6 +34,7 @@ Contenidos del ramo
    ejercicios-20100414
    arreglos
    strings
+   funciones
 
 Guía de ejercicios
 ------------------
