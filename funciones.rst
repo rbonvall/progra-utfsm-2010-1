@@ -188,16 +188,13 @@ que calcule :math:`x^n`. ::
     function Potencia(x: Real; n: Integer): Real;
     var
         i: Integer;
+        resultado: Real;
     begin
-        Potencia := 1;
+        resultado := 1;
         for i := 1 to n do
-            Potencia := Potencia * x;
+            resultado := resultado * x;
+        Potencia := resultado;
     end;
-
-En este caso, 
-hemos usado el nombre de la función
-como una variable intermedia
-para ir guardando el resultado parcial.
 
 El programa completo sería el siguiente:
 

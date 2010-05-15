@@ -5,10 +5,12 @@ var
 function Potencia(x: Real; n: Integer): Real;
 var
     i: Integer;
+    resultado: Real;
 begin
-    Potencia := 1;
+    resultado := 1;
     for i := 1 to n do
-        Potencia := Potencia * x;
+        resultado := resultado * x;
+    Potencia := resultado;
 end;
 
 function H(x: Real): Real;
