@@ -71,5 +71,32 @@ y cuenta cuántas vocales tiene:
 .. literalinclude:: programas/may-vocales.pas
    :linenos:
 
+Concatenación de strings
+~~~~~~~~~~~~~~~~~~~~~~~~
+.. index:: concatenación
+
+La **concatenación** de strings
+es la operación de pegar dos strings
+uno después del otro.
+Por ejemplo,
+al concatenar ``'hola '`` y ``mundo``,
+se obtiene el string ``'hola mundo'``.
+
+En Pascal hay dos maneras equivalentes
+de representar la concatenación:
+
+* el operador ``+`` aplicado a operandos de tipo ``String``;
+* la función ``Concat(s1, s2)``. ::
+
+    a := 'perro';
+    b := 'gato';
+    WriteLn(a + b);        { imprime 'perrogato' }
+    WriteLn(Concat(a, b)); { imprime 'perrogato' }
+
+Aunque se representa con el operador ``+``,
+la concatenación no es una suma.
+La suma es una operación conmutativa,
+mientras que la concatenación no lo es.
+
 .. include:: disqus.rst
 
