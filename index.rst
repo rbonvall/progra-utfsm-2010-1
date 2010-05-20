@@ -35,6 +35,8 @@ Contenidos del ramo
    arreglos
    strings
    funciones
+   paso-de-parametros
+   ambito
 
 Guía de ejercicios
 ------------------
