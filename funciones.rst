@@ -75,12 +75,14 @@ que indica el comienzo del programa.
 La sintaxis para definir una función es la siguiente::
 
     function {nombre}({parámetro}: {tipo}; ...): {tipo del resultado};
+    var
+        {variables locales}
     begin
         {código de la función}
     end;
 
-Por ejemplo,
-el polinomio :math:`f` que declaramos más arriba
+(La sección ``var`` es opcional).
+Por ejemplo, el polinomio :math:`f` que declaramos más arriba
 podemos escribirlo como una función de la siguiente manera::
 
     function F(x: Real): Real;
