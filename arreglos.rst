@@ -123,21 +123,21 @@ en una tabla de 5 × 3 y luego mostrarla por pantalla::
 
     program LlenarTabla;
     const
-        M = 5;
-        N = 3;
+        nroFilas = 5;
+        nroColumnas = 3;
     var
-        tabla: Array[1..M, 1..N] of Integer;
+        tabla: Array[1..nroFilas, 1..nroColumnas] of Integer;
         i, j: Integer;
     begin
         {llenar}
-        for i := 1 to M do
-            for j := 1 to N do
+        for i := 1 to nroFilas do
+            for j := 1 to nroColumnas do
                 Read(tabla[i, j]);
 
         {mostrar}
-        for i := 1 to M do
+        for i := 1 to nroFilas do
         begin
-            for j := 1 to N do
+            for j := 1 to nroColumnas do
                 Write(tabla[i, j], ' ');
             WriteLn;
         end;
