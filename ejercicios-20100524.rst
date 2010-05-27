@@ -32,7 +32,9 @@ que sean distintos (en cuyo caso la palabra no es un palíndromo).
 .. literalinclude:: programas/string-palindromo.pas
    :linenos:
 
-
+**Tarea**: modificar el programa
+para que detecte oraciones palíndromas,
+como «Anita lava la tina» o «dábale arroz a la zorra el abad».
 
 .. include:: disqus.rst
 

@@ -37,6 +37,8 @@ Contenidos del ramo
    funciones
    paso-de-parametros
    ambito
+   ejercicios-20100519
+   ejercicios-20100524
 
 Guía de ejercicios
 ------------------
