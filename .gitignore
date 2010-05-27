@@ -4,3 +4,5 @@ diagramas/*.aux
 diagramas/*.log
 diagramas/*.pdf
 _static/jsMath
+programas/*
+!programas/*.pas
