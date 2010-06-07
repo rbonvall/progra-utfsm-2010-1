@@ -40,6 +40,7 @@ Contenidos del ramo
    ejercicios-20100519
    ejercicios-20100524
    ejercicios-20100526
+   registros
 
 Guía de ejercicios
 ------------------
