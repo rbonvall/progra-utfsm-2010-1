@@ -39,6 +39,7 @@ Contenidos del ramo
    ambito
    ejercicios-20100519
    ejercicios-20100524
+   ejercicios-20100526
 
 Guía de ejercicios
 ------------------
