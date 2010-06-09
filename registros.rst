@@ -92,5 +92,36 @@ sin tener que repetir el nombre de la variable en cada instrucción::
         notas[3] := 78;
     end;
 
+Arreglos de registros
+---------------------
+Los arreglos de registros son útiles
+para representar tablas de datos.
+Los campos representan las columnas de la tabla
+y cada entrada del arreglo representa una fila.
+
+Declaremos un arreglo de alumnos
+usando el registro definido más arriba::
+
+    const
+        N = 36;
+    var
+        alumnos: Array[1..N] of Alumno;
+
+Si el arreglo ha sido llenado,
+podemos obtener todos los datos sobre alumnos específicos:
+
+* la nota del segundo certamen del decimoséptimo alumno::
+
+      alumnos[17].notas[2]
+
+* el día de nacimiento del octavo alumno::
+
+      alumnos[8].nacimiento.dia
+
+* mostrar por pantalla el nombre completo del vigésimo cuarto alumno::
+
+      with alumnos[24] do
+          WriteLn(nombre + ' ' + apellido);
+
 .. include:: disqus.rst
 
