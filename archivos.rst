@@ -126,21 +126,57 @@ los pasos indicados a continuación.
 
        Close(archivoLogico);
 
-.. Los datos de un archivo están almacenados secuencialmente,
-.. y en todo momento hay una posición específica del archivo
-.. en la que se puede leer o escribir datos.
-.. La variable de tipo archivo
-..
-.. Al momento de abrir un archivo desde un programa,
-.. es creado un **cursor** que indica la posición actual en el archivo
-.. desde la que
-..
-.. Inmediatamente después del último dato del archivo,
-.. hay una marca que indica
+.. index:: cursor (archivo)
+
+Los datos de un archivo están almacenados secuencialmente,
+y en todo momento hay una posición específica del archivo
+(que denominaremos **cursor**)
+en la que se puede leer o escribir datos.
+
+Al abrir el archivo con ``Reset`` o ``ReWrite``,
+el cursor es posicionado al comienzo del archivo.
+Cada vez que se hace una operación de escritura o lectura,
+el cursor es avanzado de manera automática
+a la posición inmediatamente después del dato leído o escrito.
+
+.. index:: end-of-file, EOF, fin de archivo
+
+Al final de todo archivo
+hay una marca especial llamada *end-of-file* (EOF)
+que indica el final del archivo.
+Si el cursor llega al EOF,
+la operación de leer un dato del archivo es inválida.
+Para saber si el cursor ha llegado al EOF,
+se utiliza la función ``EOF(archivoLogico)``.
+
+La manera en que se leen y escriben datos del archivo
+dependen del tipo de archivo que se está utilizando.
 
 Archivos de registros
 ---------------------
-(Por escribir)
+.. index:: archivo de registro
+
+Los archivos de registros contienen una secuencia de datos
+del mismo tipo.
+Por ejemplo,
+en las siguientes declaraciones
+se define un archivo lógico que contiene enteros,
+y otro que contiene fechas::
+
+    type
+        Fecha = record
+            dia, mes, ano: Integer;
+        end;
+    var
+        archivoEnteros: File of Integer;
+        archivoFechas: File of Fecha;
+
+Un archivo de registros es parecido a un arreglo,
+ya que los datos son del mismo tipo
+y están guardados consecutivamente
+uno después del otro.
+Una diferencia importante es que el arreglo tiene tamaño fijo
+mientras que el archivo puede tener tantos datos como se desee.
 
 Escritura de archivos
 ~~~~~~~~~~~~~~~~~~~~~
@@ -182,8 +218,7 @@ indicado en la declaración del archivo lógico.
 
 Antes de realizar cualquier operación de escritura,
 es necesario verificar que aún quedan datos por leer.
-Para eso, se utiliza la función ``EOF(archivoLogico)``,
-que retorna ``True`` si se ha llegado al final del archivo.
+usando la función ``EOF``.
 Intentar leer datos de un archivo que se ha terminado
 es un error, y provoca que el programa se termine.
 
@@ -205,8 +240,8 @@ y los muestra por pantalla:
 .. literalinclude:: programas/archivo-leer.pas
    :linenos:
 
-Ejemplo visto en clases
------------------------
+Ejemplo
+~~~~~~~
 El archivo ``notas.dat`` tiene la lista de notas de un curso
 en el siguiente formato:
 
@@ -223,7 +258,50 @@ sólo de los alumnos que aprobaron.
 
 Archivos de texto
 -----------------
-(Por escribir)
+.. index:: archivo de texto
+
+Los archivos de texto contienen una secuencia de símbolos
+(como letras, espacios y signos de puntuación)
+que no necesariamente tiene una estructura fija
+como los archivos de registros.
+
+Una ventaja de los archivos de texto
+es que pueden ser creados y abiertos con cualquier editor de textos,
+como el bloc de notas de Windows.
+
+Escritura de datos
+~~~~~~~~~~~~~~~~~~
+Para escribr datos en un archivo de texto,
+se utiliza los procedimientos ``Write`` y ``WriteLn``.
+Ambos reciben como primer parámetro el archivo lógico,
+y a continuación tantos parámetros como datos se desee escribir.
+La diferencia es que ``WriteLn`` escribe el dato
+y crea una línea nueva a continuación.
+
+Por ejemplo,
+consideremos el siguiente programa:
+
+.. literalinclude:: programas/archivo-texto-escribir.pas
+   :linenos:
+
+Al ejecutar el programa,
+es creado un archivo llamado ``ejemplo.txt``.
+Si abrimos este archivo en el bloc de notas,
+veremos lo siguiente:
+
+.. code-block:: none
+
+    Cuadrado de 9 es 81
+    Cuadrado de 10 es 100
+    Cuadrado de 11 es 121
+    Cuadrado de 12 es 144
+    Cuadrado de 13 es 169
+    Cuadrado de 14 es 196
+    Cuadrado de 15 es 225
+    Cuadrado de 16 es 256
+    Cuadrado de 17 es 289
+
+
 
 .. include:: disqus.rst
 
