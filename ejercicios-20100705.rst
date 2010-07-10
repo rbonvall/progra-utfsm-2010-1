@@ -43,9 +43,10 @@ Escribir los siguientes subprogramas:
   que elimine del archivo
   el producto con el código entregado.
 
-(Ya voy a subir la explicación de cada subprograma).
-
-::
+El procedimiento ``IngresarProducto``
+debe recibir una variable de tipo ``Producto``
+pasada por referencia para poder modificarla,
+y poblar sus campos con los valores ingresados por el usuario::
 
     procedure IngresarProducto(var p: Producto);
     begin
@@ -57,7 +58,10 @@ Escribir los siguientes subprogramas:
         ReadLn(p.cantidad);
     end;
 
-::
+La función ``ExisteProducto``
+debe leer los registros uno por uno
+hasta encontrar el que tenga el código buscado.
+Una vez que es encontrado, se termina la búsqueda::
 
     function ExisteProducto(codigo: Integer): Boolean;
     var
@@ -83,7 +87,13 @@ Escribir los siguientes subprogramas:
         ExisteProducto := encontrado;
     end;
 
-::
+Para el procedimiento ``AgregarProductoAlFinal``,
+se puede abrir el archivo usando ``Append``.
+De este modo,
+el cursor quedará inicialmente posicionado
+al final del archivo,
+por lo que al escribir el nuevo producto
+quedará automáticamente agregado al final::
 
     procedure AgregarProductoAlFinal(np: Producto);
     var
@@ -95,7 +105,22 @@ Escribir los siguientes subprogramas:
         Close(a);
     end;
 
-::
+Agregar un producto al inicio del archivo
+es más complicado,
+puesto que no se pueden desplazar los registros existentes
+hacia el final.
+La solución es usar un **archivo temporal**,
+en el que se escriben los registros
+en el orden deseado.
+
+Primero se escribe el nuevo registro,
+y a continuación todos los registros
+que existían originalmente en el inventario.
+Al final,
+se elimina el archivo original
+(usando el procedimiento ``Erase``)
+y se renombra el archivo temporal
+con el nombre original (usando el procedimiento ``Rename``)::
 
     procedure AgregarProductoAlInicio(np: Producto);
     var
@@ -120,7 +145,12 @@ Escribir los siguientes subprogramas:
         Rename(t, 'inventario.dat');
     end;
 
-::
+El procedimiento ``EliminarProducto``
+también debe usar un archivo temporal.
+Todos los registros del archivo original
+deben ser leídos uno por uno,
+pero sólo son escritos en el nuevo archivo
+si su código no es el del producto a eliminar::
 
     procedure EliminarProducto(codigo: Integer);
     var
