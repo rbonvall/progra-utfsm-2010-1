@@ -43,6 +43,7 @@ Contenidos del ramo
    registros
    archivos
    ejercicios-20100623
+   ejercicios-20100630
    ejercicios-20100705
 
 Guía de ejercicios
