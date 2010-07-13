@@ -301,6 +301,72 @@ veremos lo siguiente:
     Cuadrado de 16 es 256
     Cuadrado de 17 es 289
 
+Lectura de datos
+~~~~~~~~~~~~~~~~
+Para leer datos de un archivo de texto,
+se utilizan los procedimientos ``Read`` y ``ReadLn``.
+
+A diferencia de los archivos de registros,
+es posible leer datos de distintos tipos,
+y además es posible leer varios datos de una vez.
+La manera en que se interpretan los datos leídos
+dependen del tipo de la variable
+que es pasada como parámetro a ``Read`` o ``ReadLn``.
+
+La diferencia fundamental entre ``Read`` y ``ReadLn``
+es que ``ReadLn`` avanza a la siguiente línea del archivo
+después de haber leído los datos.
+
+.. index:: EOLn
+
+Para leer todos los datos que hay en una línea
+conviene usar la función ``EOLn(archivoLogico)``,
+que retorna ``True`` cuando se ha terminado de leer
+todos los datos que están en una línea.
+
+Por ejemplo,
+supongamos que el archivo ``test.txt``
+tiene el siguiente contenido:
+
+.. code-block:: none
+
+    12 3.5 Perro
+    6 4 1 7
+    1 3 4
+    4 0 7 2
+    5 1 2
+    1 2
+    3 -1 -2
+
+Los datos del archivo
+pueden ser leídos con el siguiente programa::
+
+    program LeerTest;
+    var
+        n, m, p, q: Integer;
+        x: Real;
+        s: String;
+        a: Text;
+    begin
+        Assign(a, 'test.txt');
+        Reset(a);
+
+        Read(a, n);   { lee el 12 }
+        Read(a, x);   { lee el 3.5 }
+        ReadLn(a, s);   { lee 'Perro' y avanza a la línea siguiente }
+        ReadLn(a, n, m, p, q);  { lee todos los datos de la segunda línea }
+
+        { lee todo el resto de los datos del archivo }
+        while not EOF(a) do
+        begin
+            while not EOLn(a) do
+            begin
+                Read(a, n);
+            end;
+            ReadLn(a); { avanza a la línea siguiente }
+        end;
+        Close(a);
+    end.
 
 
 .. include:: disqus.rst
