@@ -48,8 +48,62 @@ Escribir los siguientes subprogramas:
   que elimine del archivo
   el donante con el rut entregado.
 
-(Ya voy a subir los programas)
+El procedimiento ``AgregarDonante`` es el más complicado,
+ya que hay que mover los datos a un archivo temporal,
+teniendo el cuidado para colocar el nuevo registro
+en su posición correcta::
 
+    procedure AgregarDonante(nd: Donante);
+    var
+        a, t: File of Donante;
+        d: Donante;
+    begin
+        Assign(a, 'donantes.dat');
+        Assign(t, 'tmp.dat');
+        Reset(a);
+        ReWrite(t);
+
+        while not EOF(a) do
+        begin
+            Read(a, d);
+            if d.rut < nd.rut then
+                break;
+            Write(t, d);
+        end;
+
+        Write(t, nd);
+
+        if not EOF(a) then
+            Write(t, d);
+
+        while not EOF(a) do
+        begin
+            Read(a, d);
+            Write(t, d);
+        end;
+
+        Close(a);
+        Close(t);
+        Erase(a);
+        Rename(t, 'donantes.dat');
+    end;
+
+El proceso tiene cuatro partes:
+
+1. se copian al archivo temporal todos los registros
+   que van antes del nuevo;
+
+2. se escribe el nuevo registro;
+
+3. si el ciclo ``while`` anterior terminó debido al ``break`` (y no al ``EOF``),
+   hay un registro leído en la variable ``d`` que está pendiente
+   esperando ser escrito en el archivo temporal,
+   por lo que hay que hacerlo antes de continuar;
+
+4. hay que seguir leyendo el resto de los datos del archivo original ``a``
+   y escribirlos en el archivo temporal ``t``.
+
+(Ya voy a subir el resto de los programas)
 
 .. include:: disqus.rst
 
