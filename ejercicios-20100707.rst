@@ -103,7 +103,10 @@ El proceso tiene cuatro partes:
 4. hay que seguir leyendo el resto de los datos del archivo original ``a``
    y escribirlos en el archivo temporal ``t``.
 
-(Ya voy a subir el resto de los programas)
+El resto de los subprogramas son iguales o muy parecidos
+a `los que hicimos`_ para el archivo no ordenado.
+
+.. _los que hicimos: ejercicios-20100705.html
 
 .. include:: disqus.rst
 
