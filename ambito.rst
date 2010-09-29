@@ -81,7 +81,7 @@ la variable global no es visible.
 Esto no significa que la variable global no exista;
 simplemente no es visible:
 todas las ocurrencias del nombre dentro del subprograma
-se refieren a la variable global.
+se refieren a la variable local.
 
 Como ejemplo,
 consideremos el siguiente programa:
